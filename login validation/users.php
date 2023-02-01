@@ -5,7 +5,7 @@ $user1=[
     "surname"=>"Fetahaj",
     "email"=>"vesa.fetahaj@ubt-uni.net",
     "username"=>"vesafetahaj",
-    "password"=>"vesa123",
+    "password"=>"Vesa1234",
     "role"=>"user"
 ];
 
@@ -14,7 +14,7 @@ $user2=[
     "surname"=>"Hoxha",
     "email"=>"ramiz.hoxha@ubt-uni.net",
     "username"=>"ramizhoxha",
-    "password"=>"ramiz123",
+    "password"=>"Ramiz123",
     "role"=>"admin"
 ];
 
@@ -23,7 +23,7 @@ $user3=[
     "surname"=>"Ahma",
     "email"=>"greta.ahma@ubt-uni.net",
     "username"=>"gretaahma",
-    "password"=>"greta123",
+    "password"=>"Greta123",
     "role"=>"admin"
 ];
 
@@ -32,7 +32,7 @@ $user4=[
     "surname"=>"Rrmoku",
     "email"=>"blerina.rrmoku@ubt-uni.net",
     "username"=>"blerinarrmoku",
-    "password"=>"blerin123",
+    "password"=>"Blerin123",
     "role"=>"admin"
 ];
 $user5=[
@@ -40,7 +40,7 @@ $user5=[
     "surname"=>"Fetahaj",
     "email"=>"vanesa.fetahaj@gmail.com",
     "username"=>"vanesafetahaj",
-    "password"=>"vanesa123",
+    "password"=>"Vanesa123",
     "role"=>"user"
 ];
 $user6=[
@@ -48,7 +48,7 @@ $user6=[
     "surname"=>"Fetahaj",
     "email"=>"roifetahaj@ubt-uni.net",
     "username"=>"roifetahaj",
-    "password"=>"roi123",
+    "password"=>"Roi12345",
     "role"=>"user"
 ];
 $user7=[
@@ -56,7 +56,7 @@ $user7=[
     "surname"=>"Ademaj",
     "email"=>"florentinaademaj@gmail.com",
     "username"=>"florentinaademaj",
-    "password"=>"florentina123",
+    "password"=>"Florentina123",
     "role"=>"user"
 ];
 
