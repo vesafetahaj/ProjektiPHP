@@ -154,7 +154,7 @@ if(!isset($_SESSION['email'])){
 <body>
     <div class="nav">
         <button onclick="location.href='logout.php'">Log Out</button>
-        <button onclick="location.href='dashboard.php'" class="hidden" >Dashboard</button> 
+        <button onclick="location.href='http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php'" class="hidden" >Dashboard</button> 
     </div>
     <div class="project-banner">
         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/project-banner.jpg" alt="">
