@@ -1,9 +1,9 @@
 <?php
 if(!isset($_SESSION['email'])){
-    header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/login.php");
+    header("location:login.php");
 }else{
     if($_SESSION['role'] == 'user'){
-        header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php");
+        header("location:projects.php");
     }else{
         
 
@@ -23,6 +23,7 @@ if(!isset($_SESSION['email'])){
 </html>
 
 <?php
+    }
 }
-}
+
 ?>

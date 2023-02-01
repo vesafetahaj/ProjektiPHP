@@ -2,12 +2,12 @@
 session_start();
 $hide="";
 if(!isset($_SESSION['email'])){
-    header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php");
+    header("location:projects.php");
 }else{
-    if($_SESSION['role'] == "admin"){
+    if($_SESSION['role'] == 'admin'){
         $hide="";
     }else{
-        $hide="hide";
+        $hide="hidden";
 
 ?>
 
@@ -18,11 +18,28 @@ if(!isset($_SESSION['email'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/css/footer.css">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Your Projects - START SMART Academy</title>
     <style>
-        .hide{
+        .hidden{
             display: none;
+            font-family: 'Gotham 4r', sans-serif;
+            color: #fff;
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            padding: 7px 14px;
+            font-size: 14px;
+            float: right;
+            cursor: pointer;
+            margin-top: 3px;
+            margin-right: 10px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
         }
         .project-banner{
             position: absolute;
@@ -47,7 +64,7 @@ if(!isset($_SESSION['email'])){
         .text-banner h6{
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin-top:-40px;
+            margin-top:20px;
             margin-left: 150px;
             font-size: 15px;
         }
@@ -99,19 +116,45 @@ if(!isset($_SESSION['email'])){
             border-radius: 5px;
             padding: 7px 14px;
             font-size: 14px;
-            margin-left: 1200px;
+            float: right;
             cursor: pointer;
             margin-top: 3px;
+            display: inline-block;
+            margin-right: 50px;
         }
         .nav button:hover{
             border: 2px solid lightgreen;
             color: lightgreen;
         }
+        .projects{
+            display: flex;
+            justify-content: space-around;
+            font-size: 20px;
+            font-family: monospace;
+            margin-top: -70px;
+           
+        }
+        .project-content{
+            width: auto;
+            border: 2px solid gray;
+            margin-top: 90px;
+        }
+
+        .app:hover{
+            box-shadow: 2px 2px 9px black;
+        }
+        #applab,#spritelab,#gamelab,#danceparty{
+            font-size: 27px;
+            font-family: monospace;
+            margin-left: 34px;
+            margin-top: 70px;
+        }
     </style>
 </head>
 <body>
     <div class="nav">
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/login.php"><button>Log Out</button></a>
+        <button onclick="location.href='logout.php'">Log Out</button>
+        <button onclick="location.href='dashboard.php'" class="hidden" >Dashboard</button> 
     </div>
     <div class="project-banner">
         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/project-banner.jpg" alt="">
@@ -125,8 +168,84 @@ if(!isset($_SESSION['email'])){
         <h3>Project Inspiration</h3>
         <h6>You can find starter projects in <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a>,<a href="https://code.org/educate/gamelab" target="_blank"> Game Lab </a>, <a href="https://code.org/educate/applab" target="_blank">App Lab </a>, and <a href="https://code.org/educate/weblab" target="_blank"> Web Lab</a>. These include project descriptions, tips, and demo projects you can remix to make your own!</h6>
     </div>
-    <a href="location:http://localhost:8080/Projekti/ProjektiPHP/login validation/dashboard.php" class="<?=$hide?>">Dashboard</a>
+    <h4 id="applab">App Lab Projects</h4>
+    <div class="projects">
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail.png" alt="" class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (1).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (2).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (3).png" alt=""class="app"></a>
+        </div>
+    
+    </div>
+    <h4 id="spritelab">Sprite Lab Projects</h4>
+    <div class="projects">
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (4).png" alt="" class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (5).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (6).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (7).png" alt=""class="app"></a>
+        </div>
+    
+    </div>
+    <h4 id="gamelab">Game Lab Projects</h4>
+    <div class="projects">
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (8).png" alt="" class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (9).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (10).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (11).png" alt=""class="app"></a>
+        </div>
+    
+    </div>
+    <h4 id="danceparty">Dance Party</h4>
+    <div class="projects">
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (12).png" alt="" class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (13).png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/placeholder.png" alt=""class="app"></a>
+        </div>
+        <div class="project-content">
+            <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (14).png" alt=""class="app"></a>
+        </div>
+    
+    </div> <br><br><br><br><br><br><br><br><br><br>    
 </body>
+<footer>
+            <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>
+            <div class="first-content">
+                <a href="https://www.google.com/maps/place/Universiteti+p%C3%ABr+Biznes+dhe+Teknologji/@42.6026634,21.108897,13z/data=!4m8!1m2!2m1!1subt!3m4!1s0x13549e8d5d607f25:0xa31dd05b21bd09de!8m2!3d42.647155!4d21.153124"><p>Lagjja Kalabria,10000 Prishtine, Kosovo</p></a>
+            </div>
+            <div class="second-content">
+                <p>+383 38 541 400</p>
+            </div>
+            <div class="third-content">
+                <a href="https://mail.google.com/"><p>startsmartacademy@gmail.com</p></a>
+            </div>
+            <p id="legal">© COPYRIGHT 2022. START SMART ACADEMY. ALL RIGHTS RESERVED.</p>
+        </footer>
 </html>
 
 <?php

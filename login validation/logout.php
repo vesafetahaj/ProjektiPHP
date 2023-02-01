@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/login.php");
+header("location:login.php");
 
 ?>

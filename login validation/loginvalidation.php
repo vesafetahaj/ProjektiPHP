@@ -13,8 +13,6 @@ if(isset($_POST['loginBttn'])){
         foreach($users as $user){
             $i++;
             if($email == $user['email'] && $password == $user['password']){
-                setcookie('login', $email,time()+3600);
-                
 
                 session_start();
 
@@ -22,12 +20,12 @@ if(isset($_POST['loginBttn'])){
                 $_SESSION['password']=$password;
                 $_SESSION['role']=$user['role'];
 
-                header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php");
+                header("location:projects.php");
                 exit();
 
             }else{
                 if($i == sizeOf($users)){
-                    echo "Email or password is incorrect!";
+                    header("location:notification.php");
                     exit();
                 }
 
