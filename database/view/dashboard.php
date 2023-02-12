@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c2df117003.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/ff-monteral-two" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/m7-sans" rel="stylesheet">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Dashboard - START SMART Academy</title>
     <style>
@@ -12,41 +14,101 @@
             margin: 0;
             padding: 0;
             box-sizing: content-box;
+            overflow: hidden;
         }
         .nav{
             background-color: orangered;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 40px;
+            height: 60px;
         }
-        .nav button{
-            font-family: 'Gotham 4r', sans-serif;
-            color: #fff;
-            background-color: transparent;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            padding: 7px 14px;
-            font-size: 14px;
-            float: right;
-            cursor: pointer;
-            margin-top: 3px;
-            display: inline-block;
-            margin-right: 50px;
+       
+        .side-bar{
+            width:20%;
+            height: 1000px;
+            background-color: orangered;
+
         }
-        .nav button:hover{
-            border: 2px solid lightgreen;
-            color: lightgreen;
+        
+        .nav h1{
+            font-family: 'FF Monteral Two', sans-serif;
+            color: white;
+            margin-top: 10px;
+            padding-left: 35px;
+            font-size:30px;
         }
-        table, tr, th,td{
+      
+        a {
+            display: inline;
+            color: white;
+            padding: 0px 20px;
+            text-decoration: none;
+            font-family: 'M7 Sans', sans-serif;
+            margin-left:25px;
+            float:left;
+            margin-top: 20px;
+        }
+        .side-bar i{
+            color: white; 
+            margin-top: 60px;
+            padding-left: 30px;
+        }
+        .side-bar i:first-child{
+            margin-left: 15px;
+        }
+        .side-bar i:hover{
+            color:lightgreen;   
+        }
+        a:hover{
+            color:lightgreen;
+        }
+        #main{
+            width:80%;
+            background-color: #FED8B1;
+            height: 1000px;
+            display:inline;
+            float:right;
+            margin-top: -1000px;
+        }
+        #main h1{
+            margin-top: 120px;
+            text-align: center;
+            color:orangered;
+            font-size: 40px;
+            font-family: 'FF Monteral Two', sans-serif;
+        }
+        .gallery {
+            margin: 20px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 280px;
+            margin-top: 100px;
+            background-color: white;
+        }
+    
+        .desc {
+            padding: 15px;
+            text-align: center;
+            color:white;
+            font-family: 'FF Monteral Two', sans-serif;
+        }
+        #main i{
+            font-size:60px;
+            margin-top: 30px;
+            margin-left: 100px;
+            margin-bottom: 30px;
+        }
+       
+        /* table, tr, th,td{
             border: 2px solid black;
             margin: 0 auto;
             margin-top: 30px;
             border-collapse: collapse;
             padding: 14px 7px;
         }
-        #signupheading{
+        h1{
             font-size: 30px;
             margin-top: 60px;
             text-align: center;
@@ -60,22 +122,48 @@
         }
         #signup tr:nth-child(odd){
             background-color: lightgreen;
-        }
-        button{
-            padding: 5px 6px;
-            font-family: 'Gotham 4r', sans-serif;
-            background-color: salmon;
-            border: 1px solid red;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+        } */
+        
     </style>
 </head>
 <body>
-    <h1 id="signupheading">Information about users</h1>
+
     <div class="nav">
-        <button onclick="location.href='http://localhost:8080/Projekti/ProjektiPHP/login validation/logout.php'">Log Out</button>
+        <h1>DASHBOARD</h1>
     </div>
+    <div class="side-bar">
+            
+        <i class="fa-solid fa-users"></i><a href="usersdashboard.php">Information about new users</a>
+        <i class="fa-solid fa-address-book"></i><a href="contactdashboard.php">Contact Forms</a>
+        <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
+        <i class="fa-solid fa-newspaper"></i><a href="newsdashboard.php">News</a>
+    
+    </div>
+    <div id="main">
+       <h1>Welcome to Start Smart Academy's</h1>
+       <h1 style="margin-top: 20px">DASHBOARD</h1>
+       <div class="gallery" style="margin-left: 90px; border: 1px solid blue;">
+            <i class="fa-solid fa-user-pen" width="600" height="400" style="color:blue;"></i>
+            <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">3</h2>
+            <div class="desc" style="background-color: blue;">Admins</div>
+        </div>
+
+        <div class="gallery" style="border: 1px solid green;">
+        <i class="fa-solid fa-graduation-cap" width="600" height="400"  style="color:green;"></i>
+            <h2 style="color:green;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">100</h2>
+            <div class="desc" style="background-color: green;">Students</div>
+        </div>
+
+        <div class="gallery" style="border: 1px solid purple;">
+            <i class="fa-solid fa-book" width="600" height="400" style="color:purple;"></i>
+            <h2 style="color:purple;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">5</h2>
+            <div class="desc" style="background-color: purple;">Programs</div>
+        </div>
+
+        
+    </div>
+    
+    <!-- <h1 id="signupheading">Information about users</h1>
     <table id="signup">
         <tr>
             <th>ID</th>
@@ -88,11 +176,11 @@
         </tr>
         <?php
         include_once '../repository/userRepository.php';
-        $userRepository  = new UserRepository();
+        $userRepository = new UserRepository();
         $users = $userRepository->getAllUsers();
-        foreach($users as $user){
-           echo 
-           "
+        foreach ($users as $user) {
+            echo
+                "
            <tr>
                <td>$user[id]</td>
                <td>$user[name]</td>
@@ -105,10 +193,10 @@
            </tr>
            ";
         }
-        
-        
+
+
         ?>
-    </table>
+    -->
     
 </body>
 </html>

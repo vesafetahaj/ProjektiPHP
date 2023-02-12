@@ -16,6 +16,7 @@
             border: 2px solid salmon;
             height: 600px;
             background-color: lightyellow;
+            margin-top: 25px;
         }
        div img{
         float: right;

@@ -1,17 +1,7 @@
 <?php
 session_start();
-$hide="";
-if(!isset($_SESSION['email'])){
-    header("location:projects.php");
-}else{
-    if($_SESSION['role'] == 'admin'){
-        $hide="";
-    }else{
-        $hide="hidden";
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +12,7 @@ if(!isset($_SESSION['email'])){
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Your Projects - START SMART Academy</title>
     <style>
-        .hidden{
-            display: none;
+        #dashboardbttn{
             font-family: 'Gotham 4r', sans-serif;
             color: #fff;
             background-color: transparent;
@@ -86,6 +75,7 @@ if(!isset($_SESSION['email'])){
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 30px;
             display: inline;
+            margin-top: 20px;
         }
         .project-inspiration h6{
             float: right;
@@ -126,6 +116,10 @@ if(!isset($_SESSION['email'])){
             border: 2px solid lightgreen;
             color: lightgreen;
         }
+        #dashboardbttn:hover{
+            border: 2px solid lightgreen;
+            color: lightgreen;
+        }
         .projects{
             display: flex;
             justify-content: space-around;
@@ -139,7 +133,6 @@ if(!isset($_SESSION['email'])){
             border: 2px solid gray;
             margin-top: 90px;
         }
-
         .app:hover{
             box-shadow: 2px 2px 9px black;
         }
@@ -153,8 +146,13 @@ if(!isset($_SESSION['email'])){
 </head>
 <body>
     <div class="nav">
-        <button onclick="location.href='logout.php'">Log Out</button>
-        <button onclick="location.href='http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php'" class="hidden" >Dashboard</button> 
+        <a href='logout.php'><button>Log Out</button></a>
+        <?php
+        if (isset($_SESSION['role'])&&$_SESSION['role']=="admin") {
+            echo '<a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"><button id="dashboardbttn">Dashboard</button></a>';
+        }
+        
+        ?>
     </div>
     <div class="project-banner">
         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/project-banner.jpg" alt="">
@@ -169,7 +167,7 @@ if(!isset($_SESSION['email'])){
         <h6>You can find starter projects in <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a>,<a href="https://code.org/educate/gamelab" target="_blank"> Game Lab </a>, <a href="https://code.org/educate/applab" target="_blank">App Lab </a>, and <a href="https://code.org/educate/weblab" target="_blank"> Web Lab</a>. These include project descriptions, tips, and demo projects you can remix to make your own!</h6>
     </div>
     <h4 id="applab">App Lab Projects</h4>
-    <div class="projects">
+    <div class="projects" style=" background-color: lightpink;">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail.png" alt="" class="app"></a>
         </div>
@@ -185,7 +183,7 @@ if(!isset($_SESSION['email'])){
     
     </div>
     <h4 id="spritelab">Sprite Lab Projects</h4>
-    <div class="projects">
+    <div class="projects" style=" background-color: yellow;">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (4).png" alt="" class="app"></a>
         </div>
@@ -201,7 +199,7 @@ if(!isset($_SESSION['email'])){
     
     </div>
     <h4 id="gamelab">Game Lab Projects</h4>
-    <div class="projects">
+    <div class="projects" style=" background-color: lightgreen;">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (8).png" alt="" class="app"></a>
         </div>
@@ -217,7 +215,7 @@ if(!isset($_SESSION['email'])){
     
     </div>
     <h4 id="danceparty">Dance Party</h4>
-    <div class="projects">
+    <div class="projects" style=" background-color: lightblue;">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (12).png" alt="" class="app"></a>
         </div>
@@ -247,9 +245,3 @@ if(!isset($_SESSION['email'])){
             <p id="legal">© COPYRIGHT 2022. START SMART ACADEMY. ALL RIGHTS RESERVED.</p>
         </footer>
 </html>
-
-<?php
-
-    }
-}
-?>
