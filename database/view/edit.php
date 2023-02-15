@@ -7,9 +7,6 @@ $userRepository = new UserRepository();
 
 $user = $userRepository->getUserById($userId);
 
-
-
-
 ?>
 
 

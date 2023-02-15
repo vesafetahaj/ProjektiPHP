@@ -87,7 +87,7 @@
             margin-top: 100px;
             background-color: white;
         }
-    
+       
         .desc {
             padding: 15px;
             text-align: center;
@@ -174,28 +174,7 @@
             <th>Edit</th>
             <th>Delete</th>
         </tr>
-        <?php
-        include_once '../repository/userRepository.php';
-        $userRepository = new UserRepository();
-        $users = $userRepository->getAllUsers();
-        foreach ($users as $user) {
-            echo
-                "
-           <tr>
-               <td>$user[id]</td>
-               <td>$user[name]</td>
-               <td>$user[surname]</td>
-               <td>$user[email]</td>
-               <td>$user[password]</td>
-               <td><button onclick=location.href='edit.php?id=$user[id]'>Edit</button></td>
-               <td><button onclick=location.href='delete.php?id=$user[id]'>Delete</button></td>
-
-           </tr>
-           ";
-        }
-
-
-        ?>
+       
     -->
     
 </body>

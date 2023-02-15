@@ -11,7 +11,7 @@ if(isset($_POST['signup'])){
         $surname = $_POST['surname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $id = rand(100,999).$email;
+        $id = rand(1,999).$email;
 
         $user = new User($id,$name,$surname,$email,$password);
         $userRepository = new UserRepository();
