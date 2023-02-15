@@ -17,13 +17,13 @@ class UserRepository{
         $surname = $user->getSurname();
         $email = $user->getEmail();
         $password = $user->getPassword();
-        $hashed_password = password_hash($password,PASSWORD_BCRYPT);
+        $password = password_hash($password,PASSWORD_BCRYPT);
 
 
-        $sql = "INSERT INTO user (id,name,surname,email,hashed_password) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO user (id,name,surname,email,password) VALUES (?,?,?,?,?)";
         
         $statement = $conn->prepare($sql);
-        $statement->execute([$id,$name,$surname,$email,$hashed_password]);
+        $statement->execute([$id,$name,$surname,$email,$password]);
         echo "<script> alert('You have signed up successfully!') </script>";
     }
 
@@ -37,8 +37,14 @@ class UserRepository{
         return $users;
     }
 
-    function getUserByEmailAndPassword($email,$hashed_password){
-      
+    function getUserByEmailAndPassword($email,$password){
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user where email = '$email' and password='$password'";
+        $statement = $conn->query($sql);
+        $user = $statement->fetchAll();
+
+        return $user;
     }
 
     function getUserById($id){
@@ -52,14 +58,14 @@ class UserRepository{
     }
 
 
-    function updateUser($id,$name,$surname,$email,$hashed_password){
+    function updateUser($id,$name,$surname,$email,$password){
         $conn = $this->connection;
 
-        $sql = "UPDATE user SET name=?,surname=?,email=?,hashed_password=? where id=?";
+        $sql = "UPDATE user SET name=?,surname=?,email=?,password=? where id=?";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$name,$surname,$email,$hashed_password,$id]);
+        $statement->execute([$name,$surname,$email,$password,$id]);
         echo "<script> alert('User has been updated successfuly!') </script>";
     }
 
@@ -73,14 +79,7 @@ class UserRepository{
         echo "<script> alert('User has been deleted successfuly!') </script>";
     }
     
-    function getEmail($email){
-        $conn = $this->connection;
-
-        $sql = "SELECT email from user where email='$email'";
-        $statement=$conn->query($sql);
-        $user = $statement->fetch();
-        return $user;
-    }
+    
 }
 
 

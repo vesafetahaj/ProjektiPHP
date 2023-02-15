@@ -59,7 +59,8 @@
                         <label>Confirm Password</label>
                         <input type="password" placeholder="Confirm Password" class="inputfield" id="confirmpassword" style="margin-left: 100px;"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="confirmpassword" id="confirmpasswordMessage"></label> <br>
-                        <a href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/html/projects.html" style="margin-left: 0px;"><button id="signup" name="signup">Sign up</button></a>
+                        <a href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/html/projects.html" style="margin-left: 0px;"><button id="signup" name="signup">Sign up</button></a><br>
+                        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/login.php" style="margin-left: 0px">Go back to log in</a><br><br>
                     </form> 
                     <?php include_once '../controller/registerController.php'?>
                     <input type="checkbox" name="remember me">

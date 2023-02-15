@@ -1,5 +1,5 @@
 <?php 
-
+include_once '../database/repository/userRepository.php';
 class User{
     private $id;
     private $name;
@@ -17,7 +17,6 @@ class User{
 
     }
 
-
     function getId(){
         return $this->id;
     }
@@ -34,7 +33,7 @@ class User{
     function getPassword(){
         return $this->password;
     }
-
+  
 }
 
 

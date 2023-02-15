@@ -148,7 +148,7 @@ session_start();
     <div class="nav">
         <a href='logout.php'><button>Log Out</button></a>
         <?php
-        if (isset($_SESSION['role'])&&$_SESSION['role']=="admin") {
+        if (isset($_SESSION['role'])&& $_SESSION['role']=="admin") {
             echo '<a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"><button id="dashboardbttn">Dashboard</button></a>';
         }
         
