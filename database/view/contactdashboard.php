@@ -31,7 +31,7 @@
     <?php
         include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\contactRepository.php';
         $contactRepository = new ContactRepository();
-        $contactusers = $contactRepository->getAllContactUsers();
+        $contactusers = $contactRepository->getAllContacts();
         foreach ($contactusers as $contactuser) {
             echo
                 "

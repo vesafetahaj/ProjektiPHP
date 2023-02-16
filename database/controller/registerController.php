@@ -1,6 +1,6 @@
 <?php 
-include_once '../repository/userRepository.php';
-include_once '../models/user.php';
+include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\userRepository.php';
+include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\user.php';
 
 if(isset($_POST['signup'])){
     if(empty($_POST['name']) || empty($_POST['surname']) || empty($_POST['email']) || 

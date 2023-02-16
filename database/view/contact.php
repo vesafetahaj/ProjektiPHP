@@ -1,6 +1,4 @@
-<?php 
-include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\contactController.php'
-?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,14 +38,16 @@ include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\contactCo
             <div class="contact">
                 <div class="form">
                     <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/paid-section.jpg">
-                    <form name="myForm" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                        <input type="text" placeholder="name" id="name" required>
-                        <input type="number" placeholder="phone" id="phone" required><br>
-                        <input type="email" placeholder="email" id="email" required>
-                        <input type="number" placeholder="zip code" id="zipcode" required><br>
-                        <button onclick="contactValidation()" name="submitContact" id="submitContact">SUBMIT</button>
+                    <form name="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                        <input type="text" placeholder="name" id="name" name="name">
+                        <input type="number" placeholder="phone" id="phone" name="phone"><br>
+                        <input type="email" placeholder="email" id="email" name="email">
+                        <input type="number" placeholder="zip code" id="zipcode" name="zipcode"><br>
+                        <button name="contactBttn" id="contactBttn">SUBMIT</button>
                     </form>
-                    
+                    <?php 
+                        include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\contactController.php'
+                    ?>
                 </div>
             </div>
             <div class="info">

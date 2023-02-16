@@ -100,29 +100,7 @@
             margin-left: 100px;
             margin-bottom: 30px;
         }
-       
-        /* table, tr, th,td{
-            border: 2px solid black;
-            margin: 0 auto;
-            margin-top: 30px;
-            border-collapse: collapse;
-            padding: 14px 7px;
-        }
-        h1{
-            font-size: 30px;
-            margin-top: 60px;
-            text-align: center;
-            font-family: monospace;
-        }
-        #signup th{
-            background-color: royalblue;
-        }
-        #signup tr:nth-child(even){
-            background-color: lightblue;
-        }
-        #signup tr:nth-child(odd){
-            background-color: lightgreen;
-        } */
+    
         
     </style>
 </head>
@@ -162,20 +140,7 @@
 
         
     </div>
-    
-    <!-- <h1 id="signupheading">Information about users</h1>
-    <table id="signup">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-       
-    -->
+
     
 </body>
 </html>

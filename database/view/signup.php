@@ -26,7 +26,7 @@
                 <a href="http://localhost:8080/Projekti/ProjektiPHP/planprogrami.php">Planprogrami</a>
                 <a href="http://localhost:8080/Projekti/ProjektiPHP/news.php">News</a>
                 <a href="http://localhost:8080/Projekti/ProjektiPHP/aboutus.php">About Us</a>
-                <a href="http://localhost:8080/Projekti/ProjektiPHP/contact.php">Contact</a>
+                <a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/contact.php">Contact</a>
                 <a href="http://localhost:8080/Projekti/ProjektiPHP/regjistrohu.php">Regjistrohu</a>
             </div>
         </header>

@@ -9,7 +9,7 @@ class ContactRepository{
         $this->connection = $conn->startConnection();
     }
 
-    function insertContactUser($userContact){
+    function insertContacts($userContact){
         $conn = $this->connection;
 
         $id = $userContact->getId();
@@ -26,7 +26,7 @@ class ContactRepository{
         echo "<script> alert('Your contact form was sent successfully!') </script>";
     }
     
-    function getAllContactUsers(){
+    function getAllContacts(){
         $conn = $this->connection;
 
         $sql = "SELECT * FROM contact";

@@ -1,5 +1,5 @@
 <?php 
-include '../database/databaseConnection.php';
+include 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
 
 class UserRepository{
     private $connection;

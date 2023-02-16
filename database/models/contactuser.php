@@ -1,11 +1,12 @@
 <?php 
-include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
+include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\contactRepository.php';
 class ContactUser{
     private $id;
     private $name;
     private $email;
-    private $phone;
     private $zipcode;
+    private $phone;
+   
     
 
     function __construct($id,$name,$email,$zipcode,$phone){
