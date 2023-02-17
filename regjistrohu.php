@@ -56,37 +56,37 @@
                     <label>Qyteti</label> <br>
                     <select id="selectCity" name="city">
                         <option>--</option>
-                        <option>Prishtine</option>
-                        <option>Peje</option>
-                        <option>Prizren</option>
-                        <option>Gjakove</option>
-                        <option>Mitrovice</option>
-                        <option>Ferizaj</option>
+                        <option value="Prishtine">Prishtine</option>
+                        <option value="Peje">Peje</option>
+                        <option value="Prizren">Prizren</option>
+                        <option value="Gjakove">Gjakove</option>
+                        <option value="Mitrovice">Mitrovice</option>
+                        <option value="Ferizaj">Ferizaj</option>
                         
                     </select> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="cityMessage"></label> <br>
                     <label>Lloji i Trajnimit</label> <br>
                     <select id="trajnimi" name="trajnimi">
                         <option>--</option>
-                        <option>Fizikisht</option>
-                        <option>Online</option>
+                        <option value="Fizikisht">Fizikisht</option>
+                        <option value="Online">Online</option>
                     </select><br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="trajnimiMessage"></label> <br>
                     <label>Koha qe preferoni</label> <br>
                     <select id="orari" name="orari">
                         <option>--</option>
-                        <option>9:00 - Hëne, Mërkurë</option>
-                        <option>10:00 - Hëne, Mërkurë</option>
-                        <option>11:00 - Hëne, Mërkurë</option>
-                        <option>12:00 - Hëne, Mërkurë</option>
-                        <option>13:30 - Hëne, Mërkurë</option>
-                        <option>15:00 - Hëne, Mërkurë</option>
-                        <option>9:00 - Marte, Enjte</option>
-                        <option>10:00 - Marte, Enjte</option>
-                        <option>11:00 - Marte, Enjte</option>
-                        <option>12:00 - Marte, Enjte</option>
-                        <option>13:30 - Marte, Enjte</option>
-                        <option>15:00 - Marte, Enjte</option>
+                        <option value="9:00 - Hëne, Mërkurë">9:00 - Hëne, Mërkurë</option>
+                        <option value="10:00 - Hëne, Mërkurë">10:00 - Hëne, Mërkurë</option>
+                        <option value="11:00 - Hëne, Mërkurë">11:00 - Hëne, Mërkurë</option>
+                        <option value="12:00 - Hëne, Mërkurë">12:00 - Hëne, Mërkurë</option>
+                        <option value="13:30 - Hëne, Mërkurë">13:30 - Hëne, Mërkurë</option>
+                        <option value="15:00 - Hëne, Mërkurë">15:00 - Hëne, Mërkurë</option>
+                        <option value="9:00 - Marte, Enjte">9:00 - Marte, Enjte</option>
+                        <option value="10:00 - Marte, Enjte">10:00 - Marte, Enjte</option>
+                        <option value="11:00 - Marte, Enjte">11:00 - Marte, Enjte</option>
+                        <option value="12:00 - Marte, Enjte">12:00 - Marte, Enjte</option>
+                        <option value="13:30 - Marte, Enjte">13:30 - Marte, Enjte</option>
+                        <option value="15:00 - Marte, Enjte">15:00 - Marte, Enjte</option>
                     </select> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="orariMessage"></label> <br>
                     <button id="regjistrohu" name="regjistrohuBttn">Regjistrohu</button>

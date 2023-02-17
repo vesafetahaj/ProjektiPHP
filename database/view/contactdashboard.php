@@ -15,7 +15,9 @@
 </head>
 <body>
 <div class="container">       
-    <h2>The information about contact forms</h2>  <br>  
+    <h2 style="margin-top:30px">The information about contact forms</h2>  <br> 
+    <a href="dashboard.php"><button class='btn btn-warning' style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
+ 
   <table class="table table-striped table-hover">
     <thead>
       <tr class = "table-warning">

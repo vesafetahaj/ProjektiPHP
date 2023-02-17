@@ -7,33 +7,10 @@ class Student{
     private $age;
     private $phone;
     private $email;
-    private $cities = array(
-        'Prishtine',
-        'Peje',
-        'Prizren',
-        'Gjakove',
-        'Mitrovice',
-        'Ferizaj'
-    );
-    private $trajnimet = array(
-        'Fizikisht',
-        'Online'
-    );
+    private $cities;
+    private $trajnimet;
 
-    private $oraret = array(
-        '9:00 - Hëne, Mërkurë',
-        '10:00 - Hëne, Mërkurë',
-        '11:00 - Hëne, Mërkurë',
-        '12:00 - Hëne, Mërkurë',
-        '13:30 - Hëne, Mërkurë',
-        '15:00 - Hëne, Mërkurë',
-        '9:00 - Marte, Enjte',
-        '10:00 - Marte, Enjte',
-        '11:00 - Marte, Enjte',
-        '12:00 - Marte, Enjte',
-        '13:30 - Marte, Enjte',
-        '15:00 - Marte, Enjte'
-    );
+    private $oraret;
 
    
     
@@ -45,9 +22,9 @@ class Student{
          $this->age=$age;
          $this->phone=$phone;
          $this->email=$email;
-         $this->cities=$cities;
-         $this->trajnimet=$trajnimet;
-         $this->oraret=$oraret;
+         $this->cities = $cities;
+         $this->trajnimet = $trajnimet;
+         $this->oraret = $oraret;
          
     }
 
@@ -70,25 +47,13 @@ class Student{
         return $this->age;
     }
     public function getCityOptions() {
-        $options = '';
-        foreach ($this->cities as $city) {
-          $options .= '<option value="' . $city . '">' . $city . '</option>';
-        }
-        return $options;
+        return $this->cities;
     }
     public function getTrajnimiOptions() {
-        $options = '';
-        foreach ($this->trajnimet as $trajnimi) {
-          $options .= '<option value="' . $trajnimi . '">' . $trajnimi . '</option>';
-        }
-        return $options;
+        return $this->trajnimet;
     }
     public function getOrariOptions() {
-        $options = '';
-        foreach ($this->oraret as $orari) {
-          $options .= '<option value="' . $orari . '">' . $orari . '</option>';
-        }
-        return $options;
+        return $this->oraret;
     }
   
     

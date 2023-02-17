@@ -15,7 +15,9 @@
 </head>
 <body>
 <div class="container">       
-    <h2>The information about new students</h2>  <br>  
+    <h2 style="margin-top:30px">The information about new students</h2>  <br>  
+    <a href="dashboard.php"><button class='btn btn-primary' style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
+
   <table class="table table-striped table-hover">
     <thead>
       <tr class="table-primary">

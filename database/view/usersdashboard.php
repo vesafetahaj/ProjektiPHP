@@ -11,11 +11,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Registered users</title>
-
 </head>
 <body>
 <div class="container">       
-    <h2>The information about new registered users</h2>  <br>  
+    <h2 style="margin-top:30px">The information about new registered users</h2>  <br>  
+    <a href="dashboard.php"><button class='btn btn-success' style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
   <table class="table table-striped table-hover">
     <thead>
       <tr class="table-success">

@@ -115,6 +115,7 @@
         <i class="fa-solid fa-address-book"></i><a href="contactdashboard.php">Contact Forms</a>
         <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
         <i class="fa-solid fa-newspaper"></i><a href="newsdashboard.php">News</a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" style="margin-top:60px;margin-left:-80px;">LogOut</a>
     
     </div>
     <div id="main">

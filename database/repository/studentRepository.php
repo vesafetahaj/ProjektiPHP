@@ -23,9 +23,10 @@ class StudentRepository{
 
 
         
-        $sql = "INSERT INTO regjistro (id,emri,mbiemri,mosha,numriTel,email,city,trajnimi, orari) VALUES (?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO regjistro (id, emri, mbiemri, mosha, numriTel, email, city, trajnimi, orari) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $statement = $conn->prepare($sql);
-        $statement->execute([$id,$name,$surname,$age,$phone,$email,$cities,$trajnimet,$oraret]);
+        $statement->execute([$id, $name, $surname, $age, $phone, $email, $cities, $trajnimet, $oraret]);
         echo "<script> alert('Regjistrimi juaj u be me sukses') </script>";
     }
 
