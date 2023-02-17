@@ -43,7 +43,7 @@
         <h4>I nderuar perdorues i START SMART Academy, </h4>
         <h5>Email ose Password jane gabim apo ju nuk jeni regjistruar akoma.</h5><br><br>
         <h5><a href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/html/signup.html">Regjistrohu tani per te pasur casje ne sherbimet tona</a></h5>
-        <h5><a href="login.php">Go back</a></h5>
+        <h5><a href="login.php">Go back and try again</a></h5>
         
     </div>
 </body>
