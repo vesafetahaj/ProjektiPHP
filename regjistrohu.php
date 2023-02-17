@@ -1,14 +1,4 @@
-<?php
-require_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php');
-if(isset($_POST['regjistrohuBttn'])){
-    $qyteti = $_POST['selectCity'];
-    $sql = $conn-> prepare('INSERT INTO regjistro(qyteti) values(:qyteti)');
-    $conn->beginTransaction();
-    $sql -> execute(array(':qyteti'=>$qyteti));
-    $conn->comit();
-    
-}
-?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,27 +34,27 @@ if(isset($_POST['regjistrohuBttn'])){
                 <h1>REGJISTROHUNI TANI NË KURSIN E PROGRAMIMIT DUKE PLOTËSUAR<br> TË DHËNAT MË POSHTË:</h1> <br>
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
                     <label>Emri</label> <br>
-                    <input type="text" id="nameField"> <br>
+                    <input type="text" id="nameField" name="name"> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="nameMessage"></label> <br>
 
                     <label>Mbiemri</label> <br>
-                    <input type="text" id="surnameField"> <br>
+                    <input type="text" id="surnameField"name="surname"> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="surnameMessage"></label> <br>
 
                     <label>Mosha</label> <br>
-                    <input type="number" id="ageField"> <br>
+                    <input type="number" id="ageField" name="age"> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;"  id="ageMessage"></label> <br>
 
                     <label>Numri i telefonit</label> <br>
-                    <input type="text" id="numberField"> <br>
+                    <input type="text" id="numberField" name="phone"> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;"  id="numberMessage"></label> <br>
 
                     <label>Email</label> <br>
-                    <input type="email" id="emailField"> <br>
+                    <input type="email" id="emailField" name="email"> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="emailMessage"></label> <br>
 
                     <label>Qyteti</label> <br>
-                    <select id="selectCity" name="selectCity">
+                    <select id="selectCity" name="city">
                         <option>--</option>
                         <option>Prishtine</option>
                         <option>Peje</option>
@@ -72,17 +62,18 @@ if(isset($_POST['regjistrohuBttn'])){
                         <option>Gjakove</option>
                         <option>Mitrovice</option>
                         <option>Ferizaj</option>
+                        
                     </select> <br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="cityMessage"></label> <br>
                     <label>Lloji i Trajnimit</label> <br>
-                    <select id="trajnimi">
+                    <select id="trajnimi" name="trajnimi">
                         <option>--</option>
                         <option>Fizikisht</option>
                         <option>Online</option>
                     </select><br>
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="trajnimiMessage"></label> <br>
                     <label>Koha qe preferoni</label> <br>
-                    <select id="orari">
+                    <select id="orari" name="orari">
                         <option>--</option>
                         <option>9:00 - Hëne, Mërkurë</option>
                         <option>10:00 - Hëne, Mërkurë</option>
@@ -100,6 +91,9 @@ if(isset($_POST['regjistrohuBttn'])){
                     <label  style = "color: white; font-size: 14px; padding-left: 330px;" id="orariMessage"></label> <br>
                     <button id="regjistrohu" name="regjistrohuBttn">Regjistrohu</button>
                 </form>
+                <?php 
+                        include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\regjistrohuController.php'
+                    ?>
             </div>
         </main>
         <footer>
