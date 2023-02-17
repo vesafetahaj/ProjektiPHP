@@ -8,7 +8,8 @@ if(isset($_POST['loginBttn'])){
     }else{
         $email = $_POST['email'];
         $password = $_POST['password'];
-
+        $logInUsers = new LogInUsers();
+        $users = $logInUsers->getUsersByEmailAndPassword();
         $i = 0;
         foreach($users as $user){
             $i++;
@@ -18,8 +19,9 @@ if(isset($_POST['loginBttn'])){
 
                 $_SESSION['email']=$email;
                 $_SESSION['password']=$password;
-                $_SESSION['role']=$user['role'];
-
+                $_SESSION['is_admin']=$user['is_admin'];
+                
+            
                 header("location:projects.php");
                 exit();
 

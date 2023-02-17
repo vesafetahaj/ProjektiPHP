@@ -17,7 +17,7 @@ class UserRepository{
         $surname = $user->getSurname();
         $email = $user->getEmail();
         $password = $user->getPassword();
-        $password = password_hash($password,PASSWORD_BCRYPT);
+       
 
 
         $sql = "INSERT INTO user (id,name,surname,email,password) VALUES (?,?,?,?,?)";
