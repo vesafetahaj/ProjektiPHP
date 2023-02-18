@@ -8,28 +8,22 @@ class ProjectRepository{
         $conn = new DBConnection;
         $this->connection = $conn->startConnection();
     }
-    public function getAdminId() {
-        $sql = "SELECT id FROM user WHERE is_admin = 1";
-        $statement = $this->connection->query($sql);
-        $admin = $statement->fetch();
-        return $admin['id'];
-    }
 
     public function insertProjects($project) {
         $conn = $this->connection;
     
-        $id = $project->getId();
+        $project_id = $project->getId();
         $name = $project->getName();
         $imgsrc = $project->getImgSrc();
-        $admin_id = $project->getAdminById();
+        $id = $_SESSION['id'];
     
-        $sql = "INSERT INTO projects (id, imgSrc, name, admin_id) VALUES (?, ?, ?, ?)";
+        
+        $sql = "INSERT INTO projects (imgSrc, name, id) VALUES (?, ?, ?)";
         $statement = $conn->prepare($sql);
-        $statement->execute([$id, $imgsrc, $name, $admin_id]);
+        $statement->execute([ $imgsrc, $name, $id]);
     }
     
-    
-   
+
 
     function getAdminByName(){
       $conn = $this->connection;

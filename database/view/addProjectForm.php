@@ -2,6 +2,7 @@
 
 include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\projectController.php');
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +22,8 @@ include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\projectCo
     
     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST" class="form-horizontal">
         <div class="col-xs-4" style="margin-left: 30%;margin-right:30%">
-    <!--value="<?=$user['id']?>" -->
             <label for="id" class="control-label">Image-Src:</label>
-            <input type="text" name="imgsrc" readonly class="form-control">
+            <input type="text" name="imgsrc" class="form-control">
             <label for="name" class="control-label">Name:</label>
             <input type="text" name="name" class="form-control">
            

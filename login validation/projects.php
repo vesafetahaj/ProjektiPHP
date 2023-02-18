@@ -250,9 +250,13 @@ session_start();
     </div> 
     <?php
         include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printProject.php');
-        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\addProject.php');
+        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\dbProjects.php');
+        $projectsdb = new DBProjects();
+        $projects = $projectsdb->getProjectsByImgSrcAndName();
         foreach($projects as $project){
-            printProject("http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (14).png",$project['name']);
+            $Imgsrc = $project['imgSrc'];
+            $name = $project['name'];
+            printProject($Imgsrc, $name);
         }
     ?>
     <br><br><br><br><br><br><br><br><br><br>    

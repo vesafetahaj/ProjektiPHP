@@ -12,11 +12,15 @@ if(isset($_POST['save'])){
         $id = rand(1,999);
         $name = $_POST['name'];
         $imgSrc = $_POST['imgsrc'];
-        $admin_id = $_SESSION['id'];
+         
+        $_SESSION['user_id'] = $id; 
+        $user_id = $_SESSION['user_id'];
+
+        $project = new Project($id, $imgSrc, $name);
         $projectRepository = new ProjectRepository();
-        $admin_id = $projectRepository->getAdminId();
-        $project = new Project($id, $imgSrc, $name, $admin_id);
         $projectRepository->insertProjects($project);
+
+        header("Location: http://localhost:8080/Projekti/ProjektiPHP/login%20validation/projects.php"); 
     }
 }
 

@@ -4,13 +4,11 @@ class Project{
     private $id;
     private $imgsrc;
     private $name;
-    private $admin_id;
     
-    function __construct($id,$imgsrc,$name,$admin_id){
+    function __construct($id,$imgsrc,$name){
          $this->id=$id;
          $this->imgsrc = $imgsrc;
          $this->name=$name;
-         $this->admin_id = $admin_id;
 
     }
 
@@ -23,8 +21,6 @@ class Project{
     function getImgSrc(){
         return $this->imgsrc;
     }
-    function getAdmin(){
-        return $this->admin_id;
-    }
+    
 }
 ?>
