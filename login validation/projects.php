@@ -155,6 +155,7 @@ session_start();
         
         ?>
     </div>
+    
     <div class="project-banner">
         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/project-banner.jpg" alt="">
         <div class="text-banner">
