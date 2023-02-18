@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/css/footer.css">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Your Projects - START SMART Academy</title>
@@ -167,50 +168,62 @@ session_start();
         <h6>You can find starter projects in <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a>,<a href="https://code.org/educate/gamelab" target="_blank"> Game Lab </a>, <a href="https://code.org/educate/applab" target="_blank">App Lab </a>, and <a href="https://code.org/educate/weblab" target="_blank"> Web Lab</a>. These include project descriptions, tips, and demo projects you can remix to make your own!</h6>
     </div>
     <h4 id="applab">App Lab Projects</h4>
-    <div class="projects" style=" background-color: lightpink;">
+    <div class="projects" style=" background-color: lightpink;margin-bottom:-31px">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail.png" alt="" class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFE6EE;height:40px;margin-top:-5px">Game - how to make a <br>smoothie in three steps</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (1).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFE6EE;height:40px;margin-top:-5px">Student's <br>Login Form</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (2).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFE6EE;height:40px;margin-top:-5px">Random Number <br>Generator</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (3).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFE6EE;height:40px;margin-top:-5px">Museum Ticket <br>Generator</h3>
         </div>
     
     </div>
     <h4 id="spritelab">Sprite Lab Projects</h4>
-    <div class="projects" style=" background-color: yellow;">
+    <div class="projects" style=" background-color: yellow;;margin-bottom:-31px">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (4).png" alt="" class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFDB58;height:40px;margin-top:-5px">Game</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (5).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFDB58;height:40px;margin-top:-5px">Game - Get to <br>Wolf</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (6).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFDB58;height:40px;margin-top:-5px">Game- Space <br>Runner</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (7).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#FFDB58;height:40px;margin-top:-5px">Game- Space <br> Mania</h3>
         </div>
     
     </div>
     <h4 id="gamelab">Game Lab Projects</h4>
-    <div class="projects" style=" background-color: lightgreen;">
+    <div class="projects" style=" background-color: lightgreen;;margin-bottom:-31px">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (8).png" alt="" class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#abf7b1;height:40px;margin-top:-5px">Game- A-Mazing</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (9).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#abf7b1;height:40px;margin-top:-5px">Game- Fishing</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (10).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#abf7b1;height:40px;margin-top:-5px">Game- Untitled Project</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (11).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#abf7b1;height:40px;margin-top:-5px">Love Calculator</h3>
         </div>
     
     </div>
@@ -218,18 +231,30 @@ session_start();
     <div class="projects" style=" background-color: lightblue;">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (12).png" alt="" class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#b1f2ff;height:40px;margin-top:-5px">Dance Party</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (13).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#b1f2ff;height:40px;margin-top:-5px">Dance Party Part 2</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/placeholder.png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#b1f2ff;height:40px;margin-top:-5px">Remix: Dance Party</h3>
         </div>
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (14).png" alt=""class="app"></a>
+            <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#b1f2ff;height:40px;margin-top:-5px">Dance Party Part 3</h3>
         </div>
     
-    </div> <br><br><br><br><br><br><br><br><br><br>    
+    </div> 
+    <?php
+        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printProject.php');
+        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\addProject.php');
+        foreach($projects as $project){
+            printProject("http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (14).png",$project['name']);
+        }
+    ?>
+    <br><br><br><br><br><br><br><br><br><br>    
 </body>
 <footer>
             <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>

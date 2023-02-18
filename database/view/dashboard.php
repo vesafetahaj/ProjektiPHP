@@ -117,7 +117,9 @@
         <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
         <i class="fa-solid fa-newspaper"></i><a href="addProjects.php">Add Projects</a>
         <a href="deleteProjects.php">Delete Projects</a>
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" style="margin-top:60px;margin-left:-160px;">LogOut</a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php" style="margin-top:60px;margin-left:-160px;">Go Back</a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" style="margin-top:95px;margin-left:-160px;">LogOut</a>
+        
     
     </div>
     <div id="main">
