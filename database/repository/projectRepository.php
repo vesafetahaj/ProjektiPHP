@@ -35,7 +35,23 @@ class ProjectRepository{
       return $adminName;
     }
 
-    
+    function getAllProjects(){
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM projects";
+        $statement = $conn->query($sql);
+        $projects = $statement->fetchAll();
+
+        return $projects;
+    }
+    function deleteProjectById($project_id){
+        $conn = $this->connection;
+
+        $sql = "DELETE FROM projects WHERE project_id=?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$project_id]);
+    }
     
 }
 

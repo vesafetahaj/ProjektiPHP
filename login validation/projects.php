@@ -127,12 +127,15 @@ session_start();
             font-size: 20px;
             font-family: monospace;
             margin-top: -70px;
-           
+            flex-wrap: wrap;
+    
         }
         .project-content{
-            width: auto;
+            width:220px ;
             border: 2px solid gray;
             margin-top: 90px;
+            margin-left:100px;
+            float: left;
         }
         .app:hover{
             box-shadow: 2px 2px 9px black;
@@ -259,7 +262,7 @@ session_start();
             printProject($Imgsrc, $name);
         }
     ?>
-    <br><br><br><br><br><br><br><br><br><br>    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
 </body>
 <footer>
             <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>
