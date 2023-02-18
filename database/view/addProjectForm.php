@@ -1,7 +1,7 @@
 <?php
 
 include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\projectController.php');
-
+session_start();
 
 ?>
 <!DOCTYPE html>

@@ -12,9 +12,6 @@ if(isset($_POST['save'])){
         $id = rand(1,999);
         $name = $_POST['name'];
         $imgSrc = $_POST['imgsrc'];
-         
-        $_SESSION['user_id'] = $id; 
-        $user_id = $_SESSION['user_id'];
 
         $project = new Project($id, $imgSrc, $name);
         $projectRepository = new ProjectRepository();

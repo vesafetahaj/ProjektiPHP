@@ -1,4 +1,7 @@
+<?php
+session_start();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,8 +104,16 @@
             margin-left: 100px;
             margin-bottom: 30px;
         }
+        #blue:hover{
+            background-color: lightblue;
     
-        
+        }
+        #green:hover{
+            background-color: lightgreen;
+        }
+        #purple:hover{
+            background-color: #CBC3E3;
+        }
     </style>
 </head>
 <body>
@@ -124,19 +135,19 @@
     <div id="main">
        <h1>Welcome to Start Smart Academy's</h1>
        <h1 style="margin-top: 20px">DASHBOARD</h1>
-       <div class="gallery" style="margin-left: 90px; border: 1px solid blue;">
+       <div class="gallery" style="margin-left: 90px; border: 1px solid blue;" id="blue">
             <i class="fa-solid fa-user-pen" width="600" height="400" style="color:blue;"></i>
             <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">3</h2>
             <div class="desc" style="background-color: blue;">Admins</div>
         </div>
 
-        <div class="gallery" style="border: 1px solid green;">
+        <div class="gallery" style="border: 1px solid green;" id="green">
         <i class="fa-solid fa-graduation-cap" width="600" height="400"  style="color:green;"></i>
             <h2 style="color:green;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">100</h2>
             <div class="desc" style="background-color: green;">Students</div>
         </div>
 
-        <div class="gallery" style="border: 1px solid purple;">
+        <div class="gallery" style="border: 1px solid purple;" id="purple">
             <i class="fa-solid fa-book" width="600" height="400" style="color:purple;"></i>
             <h2 style="color:purple;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">5</h2>
             <div class="desc" style="background-color: purple;">Programs</div>
