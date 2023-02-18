@@ -8,22 +8,62 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>New students</title>
+    <style>
+     table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 70%;
+        margin-left:13%;
+      }
 
+      table td, table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        height:35px;
+      }
+
+      table tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+
+      table tr:hover {
+        background-color: #ddd;
+      }
+
+      table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #0275d8;
+        color: white;
+      }
+      button{
+        border: none;
+        height: 40px;
+        border-radius: 4px;
+        color: white;
+        cursor:pointer;
+        width: 80px;
+        background-color: #0275d8;
+        margin-right:240px;
+
+      }
+      button:hover{
+        background-color: blue;
+      }
+      </style>
 </head>
 <body>
 <div class="container">       
-    <h2 style="margin-top:30px">The information about new students</h2>  <br>  
-    <a href="dashboard.php"><button class='btn btn-primary' style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
+    <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">The information about new students</h2>  <br>  
+    <a href="dashboard.php"><button style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
 
-  <table class="table table-striped table-hover">
+  <table>
     <thead>
-      <tr class="table-primary">
+      <tr>
         <th>ID</th>
         <th>Emri</th>
         <th>Mbiemri</th>

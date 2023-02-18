@@ -15,28 +15,55 @@ $user = $userRepository->getUserById($userId);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Edit User</title>
+    <style>
+        input[type=text], select, input[type=password]{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        *{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h2 style="margin-left:30%">Edit User</h2><br>
     
-    <form action="" method="POST" class="form-horizontal">
-        <div class="col-xs-4" style="margin-left: 30%;">
+    <form action="" method="POST">
+        <div style="margin-left: 30%;">
 
-            <label for="id" class="control-label">ID:</label>
-            <input type="text" name="id" value="<?=$user['id']?>" readonly class="form-control">
-            <label for="name" class="control-label">Name:</label>
-            <input type="text" name="name" value="<?=$user['name']?>" class="form-control">
-            <label for="surname" class="control-label">Surname:</label>
-            <input type="text" name="surname" value="<?=$user['surname']?>" class="form-control"> 
-            <label for="email" class="control-label">Email:</label>
-            <input type="text" name="email" value="<?=$user['email']?>" class="form-control"> 
-            <label for="password" class="control-label">Password:</label>
-            <input type="password" name="password" value="<?=$user['password']?>" class="form-control"><br>
+            <label for="id">ID:</label><br>
+            <input type="text" name="id" value="<?=$user['id']?>" readonly><br>
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" value="<?=$user['name']?>"><br>
+            <label for="surname">Surname:</label><br>
+            <input type="text" name="surname" value="<?=$user['surname']?>"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" value="<?=$user['email']?>"> <br>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" value="<?=$user['password']?>"><br>
         
             <button name="save" class="btn btn-primary btn-block">Save</button>
         
