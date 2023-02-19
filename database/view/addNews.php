@@ -11,7 +11,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
-    <title>Add New Projects - Start Smart ACADEMY</title>
+    <title>Add News - Start Smart ACADEMY</title>
     <style>
         input[type=text], select{
             width: 80%;

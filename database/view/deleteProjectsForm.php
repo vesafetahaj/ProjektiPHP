@@ -88,7 +88,7 @@ session_start();
 </head>
 <body>
 <div class="container">       
-    <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">Delete news</h2>  <br>  
+    <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">Delete projects</h2>  <br>  
     <a href="dashboard.php"><button id="back">Go back</button></a>
   <table>
     <thead>

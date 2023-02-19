@@ -1,5 +1,14 @@
 <?php
+$hide="";
 session_start();
+if(!isset($_SESSION['email'])){
+  header("location:login.php");
+}else{
+ if($_SESSION['is_admin'] == "1"){
+     $hide = "";
+ }else{
+    $hide = "hide";
+ }
 
 ?>
 <!DOCTYPE html>
@@ -13,6 +22,9 @@ session_start();
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
     <title>Your Projects - START SMART Academy</title>
     <style>
+        .hide{
+            display:none;
+        }
         #dashboardbttn{
             font-family: 'Gotham 4r', sans-serif;
             color: #fff;
@@ -203,12 +215,8 @@ session_start();
 <body>
     <div class="nav">
         <a href='logout.php'><button>Log Out</button></a>
-        <?php
-        if (isset($_SESSION['is_admin'])&& $_SESSION['is_admin']==1) {
-            echo '<a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"><button id="dashboardbttn">Dashboard</button></a>';
-        }
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"><button id="dashboardbttn" class="<?php echo $hide ?>">Dashboard</button></a>
         
-        ?>
     </div>
     
     <div class="project-banner">
@@ -329,4 +337,9 @@ session_start();
             </div>
             <p id="legal">© COPYRIGHT 2022. START SMART ACADEMY. ALL RIGHTS RESERVED.</p>
         </footer>
+    
 </html>
+<?php
+}
+
+?>

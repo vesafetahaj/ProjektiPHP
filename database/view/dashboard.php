@@ -1,5 +1,13 @@
-<?php
+<?php 
 session_start();
+
+if(!isset($_SESSION['email'])){
+ header("location:login.php");
+}else{
+ if($_SESSION['is_admin'] != "1"){
+    header("location:projects.php");
+ }
+
 
 ?>
 <!DOCTYPE html>
@@ -212,4 +220,6 @@ session_start();
     
 </body>
 </html>
+<?php
 
+    }?>
