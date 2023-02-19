@@ -36,28 +36,28 @@
                     <h1>Sign up to Start Smart Academy</h1>
                     <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
                         <label>Name</label>
-                        <input type="text" placeholder="Name" class="inputfield" id="name" name="name" style="margin-left: 180px;"><br>
+                        <input type="text" placeholder="Name" class="inputfield" id="name" name="name"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="name" id="nameMessage"></label> <br>
 
                         <label>Surname</label>
-                        <input type="text" placeholder="Surname" class="inputfield" id="surname" name="surname" style="margin-left: 160px;"><br>
+                        <input type="text" placeholder="Surname" class="inputfield" id="surname" name="surname><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="surname" id="surnameMessage"></label> <br>
 
                         <label>Gender</label>
-                        <input type="radio" name="gjinia" style="margin-left: 180px;"><label>Male</label>
-                        <input type="radio" name="gjinia" style="margin-left: 60px;"><label>Female</label> <br>
+                        <input type="radio" name="gjinia" id="male"><label>Male</label>
+                        <input type="radio" name="gjinia" id="female"><label>Female</label> <br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;"  id="genderMessage"></label> <br>
 
                         <label>Email </label>
-                        <input type="email" placeholder="Email" class="inputfield" id="email" name="email" style="margin-left: 188px;"><br>
+                        <input type="email" placeholder="Email" class="inputfield" id="email" name="email"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="email" id="emailMessage"></label> <br>
 
                         <label>Password</label>
-                        <input type="password" placeholder="Password" class="inputfield" id="password" name="password" style="margin-left: 160px;"><br>
+                        <input type="password" placeholder="Password" class="inputfield" id="password" name="password"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="password" id="passwordMessage"></label> <br>
 
                         <label>Confirm Password</label>
-                        <input type="password" placeholder="Confirm Password" class="inputfield" id="confirmpassword" style="margin-left: 100px;"><br>
+                        <input type="password" placeholder="Confirm Password" class="inputfield" id="confirmpassword"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="confirmpassword" id="confirmpasswordMessage"></label> <br>
                         <a href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/html/projects.html" style="margin-left: 0px;"><button id="signup" name="signup">Sign up</button></a><br>
                         <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/login.php" style="margin-left: 0px">Go back to log in</a><br><br>
