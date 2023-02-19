@@ -42,6 +42,26 @@ class NewsRepository{
         $statement = $conn->prepare($sql);
         $statement->execute([$news_id]);
     }
+    function getNewsById($id){
+        $conn = $this->connection;
+  
+        $sql = "SELECT * FROM addnews WHERE news_id='$id'";
+        $statement=$conn->query($sql);
+        $news = $statement->fetch();
+  
+        return $news;
+      }
+      function updateNews($news_id, $imgSrc, $name, $description, $pdf) {
+        $conn = $this->connection;
+    
+        $sql = "UPDATE addnews SET imgSrc=?, name=?, description=?, pdf=? WHERE news_id=?";
+    
+        $statement = $conn->prepare($sql);
+    
+        $statement->execute([$imgSrc, $name, $description, $pdf, $news_id]);
+        echo "<script> alert('News has been updated successfuly!') </script>";
+    }
+    
     
 }
 
