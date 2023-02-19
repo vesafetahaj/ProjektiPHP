@@ -55,6 +55,13 @@ session_start();
       #back:hover{
         background-color: #04AA6F;
       }
+      #back{
+        display:inline; 
+        float:right;
+        margin-top:-60px;
+        margin-bottom:30px;
+        margin-right:240px;
+      }
       #edit{
         background-color: blue;
       }
@@ -67,12 +74,22 @@ session_start();
       #delete:hover{
         background-color: #5f0000;
       }
+      @media only screen and (max-width: 375px){  
+        .container a #back{
+          margin-top:-10px;
+        }
+        .container table{
+          margin-left:5px;
+          
+        }
+        
+      }
 </style>
 </head>
 <body>
 <div class="container">       
     <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">The information about new registered users</h2>  <br>  
-    <a href="dashboard.php"><button style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;margin-right:240px;" id="back">Go back</button></a>
+    <a href="dashboard.php"><button id="back">Go back</button></a>
   <table>
     <thead>
       <tr>

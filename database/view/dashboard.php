@@ -18,11 +18,10 @@ session_start();
             margin: 0;
             padding: 0;
             box-sizing: content-box;
-            overflow: hidden;
         }
         .nav{
             background-color: orangered;
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
@@ -114,6 +113,55 @@ session_start();
         #purple:hover{
             background-color: #CBC3E3;
         }
+        #back{
+            margin-top:60px;
+            margin-left:-140px;
+        }
+        #logout{
+            margin-top:95px;
+            margin-left:-140px;
+        }
+        #blue{
+            margin-left: 90px;
+        }
+        @media only screen and (max-width: 375px){
+           .side-bar{
+                width:30%;
+           }
+           .side-bar a{
+            font-size:15px;
+            margin-left:0px;
+           }
+           #firstBar{
+            margin-top:90px;
+           }
+           .side-bar i{
+            display:none;
+           }
+           #main{
+            width: 70%;
+
+           }
+           #back,#logout{
+            margin-left:0px;
+            margin-top:10px
+           }
+           #main h1{
+            font-size: 25px;
+           }
+           .gallery{
+                width:60%;
+                margin-left:60px;
+                margin-top:10px;
+           }
+           #main i{
+                font-size:60px;
+                margin-left:50px;
+           }
+           #blue{
+            margin-left:60px;
+           }
+        }
     </style>
 </head>
 <body>
@@ -123,19 +171,19 @@ session_start();
     </div>
     <div class="side-bar">
             
-        <i class="fa-solid fa-users"></i><a href="usersdashboard.php">Information about new users</a>
+        <i class="fa-solid fa-users"></i><a href="usersdashboard.php" id="firstBar">Information about new users</a>
         <i class="fa-solid fa-address-book"></i><a href="contactdashboard.php">Contact Forms</a>
         <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
         <i class="fa-solid fa-newspaper"></i><a href="addProjectForm.php">Add Projects</a>
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php" style="margin-top:60px;margin-left:-140px;">Go Back</a>
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" style="margin-top:95px;margin-left:-140px;">LogOut</a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php" id="back">Go Back</a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" id="logout">LogOut</a>
         
     
     </div>
     <div id="main">
        <h1>Welcome to Start Smart Academy's</h1>
        <h1 style="margin-top: 20px">DASHBOARD</h1>
-       <div class="gallery" style="margin-left: 90px; border: 1px solid blue;" id="blue">
+       <div class="gallery" style="border: 1px solid blue;" id="blue">
             <i class="fa-solid fa-user-pen" width="600" height="400" style="color:blue;"></i>
             <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">3</h2>
             <div class="desc" style="background-color: blue;">Admins</div>

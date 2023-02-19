@@ -146,6 +146,58 @@ session_start();
             margin-left: 34px;
             margin-top: 70px;
         }
+        @media only screen and (max-width: 375px){
+            .project-banner{
+                width:100%;
+            }
+            .project-banner img{
+                height: 200px;
+            }
+            .project-banner .text-banner h4{
+                font-size: 20px;
+                margin-left: 20px;
+                margin-top: -150px;
+            }
+            .project-banner .text-banner h6{
+                margin-left: 20px;
+            }
+            .project-inspiration{
+                width:80%;
+                height: 500px;
+                margin-top: 300px;
+            }
+            .project-inspiration img{
+                width:100%;
+                
+            }
+            .project-inspiration h3{
+                font-size: 20px;
+            }
+            .project-inspiration h6{
+                font-size: 15px;
+                width:80%;
+                margin-top:50px;
+                margin-right: 30px;
+            }
+            .project-content{
+                margin-left: 25px;
+            }
+            footer{
+                width: 100%;
+            }
+            footer .first-content{
+                margin-left:-300px;
+            }
+            footer .second-content{
+                margin-left:-250px;
+            }
+            footer .third-content{
+                margin-left:-290px;
+            }
+            footer #legal{
+                margin-left:-300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -264,7 +316,7 @@ session_start();
     ?>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
 </body>
-<footer>
+    <footer>
             <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>
             <div class="first-content">
                 <a href="https://www.google.com/maps/place/Universiteti+p%C3%ABr+Biznes+dhe+Teknologji/@42.6026634,21.108897,13z/data=!4m8!1m2!2m1!1subt!3m4!1s0x13549e8d5d607f25:0xa31dd05b21bd09de!8m2!3d42.647155!4d21.153124"><p>Lagjja Kalabria,10000 Prishtine, Kosovo</p></a>

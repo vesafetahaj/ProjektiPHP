@@ -49,6 +49,14 @@ session_start();
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
+            margin-left: 30%;
+            margin-right:30%
+        }
+        @media only screen and (max-width: 375px){
+            div{
+                width: 80%;
+                margin-left:5%;
+            }
         }
     </style>
 </head>
@@ -56,7 +64,7 @@ session_start();
 <h2 style="margin-left:30%;margin-top:30px">Add Project</h2><br>
     
     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-        <div style="margin-left: 30%;margin-right:30%">
+        <div>
             <label for="id">Image-Src:</label><br>
             <input type="text" name="imgsrc"><br>
             <label for="name">Name of the project:</label><br>

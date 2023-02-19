@@ -51,12 +51,28 @@
       button:hover{
         background-color: orange;
       }
+      #back{
+        display:inline; 
+        float:right;
+        margin-top:-60px;
+        margin-bottom:30px;
+      }
+      @media only screen and (max-width: 375px){  
+        .container a #back{
+          margin-top:-10px;
+        }
+        .container table{
+          margin-left:5px;
+          
+        }
+        
+      }
       </style>
 </head>
 <body>
 <div class="container">       
     <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">The information about contact forms</h2>  <br> 
-    <a href="dashboard.php"><button style="display:inline; float:right;margin-top:-60px;margin-bottom:30px;">Go back</button></a>
+    <a href="dashboard.php"><button id="back">Go back</button></a>
  
   <table>
     <thead>
