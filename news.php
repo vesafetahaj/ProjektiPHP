@@ -51,6 +51,7 @@ $news->savePDFsToDatabase();
         <link rel="stylesheet" href="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/css/footer.css">
         <script src="https://kit.fontawesome.com/c2df117003.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     <body>
         <header id="header">
@@ -91,7 +92,7 @@ $news->savePDFsToDatabase();
                     <h5>Studenti Sam Larson fiton vendin e dyte ne garat Hackathon</h5>
                 </a>
             </div>
-            <div class="news">
+            <!--<div class="news">
                 <div class="newsContent" id="firstContent">
                     <a href="http://localhost:8080/Projekti/ProjektiPHP/pdf/Panairi i Start Smart Academy.pdf" target="_blank">
                         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/uni-fair-NB-600x338.jpg">
@@ -158,9 +159,9 @@ $news->savePDFsToDatabase();
                             te zgjerojne aftesite e tyre shoqerore dhe komunikuese.
                         </h5>
                     </a>
-                </div>
+                </div> 
 
-            </div>
+            </div>-->
             <div class="news">
             <?php
                     include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printNews.php');
@@ -171,10 +172,13 @@ $news->savePDFsToDatabase();
                         $Imgsrc = $new['imgSrc'];
                         $name = $new['name'];
                         $description = $new['description'];
-                        printNews($Imgsrc, $name,$description);
+                        $pdf = $new['pdf'];
+                        printNews($Imgsrc, $name,$description,$pdf);
                     }
                 ?>
             </div>
+           
+            
         </main>
         <footer style="margin-top: 300px;">
             <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>

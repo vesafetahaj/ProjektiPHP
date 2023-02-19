@@ -4,7 +4,7 @@ include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\news.php';
 
 
 if(isset($_POST['save'])){
-    if(empty($_POST['name']) || empty($_POST['imgsrc']) | empty($_POST['desc'])){
+    if(empty($_POST['name']) || empty($_POST['imgsrc']) || empty($_POST['desc']) || empty($_POST['pdf'])){
         echo "<script>alert('Please fill all fields!')</script>";
     }
     else{
@@ -13,12 +13,13 @@ if(isset($_POST['save'])){
         $name = $_POST['name'];
         $imgSrc = $_POST['imgsrc'];
         $desc = $_POST['desc'];
+        $pdf = $_POST['pdf'];
 
-        $news = new News($id, $imgSrc, $name,$desc);
+        $news = new News($id, $imgSrc, $name,$desc,$pdf);
         $newsRepository = new NewsRepository();
         $newsRepository->insertNews($news);
 
-        header("Location: http://localhost:8080/Projekti/ProjektiPHP/news.php"); 
+        header("Location: http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"); 
     }
 }
 

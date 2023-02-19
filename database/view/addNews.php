@@ -65,13 +65,14 @@ session_start();
     
     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
         <div>
-            <label for="id">Image-Src:</label><br>
+            <label>Image-Src:</label><br>
             <input type="text" name="imgsrc"><br>
-            <label for="name">Heading:</label><br>
+            <label>Heading:</label><br>
             <input type="text" name="name">
-            <label for="name">Description:</label><br>
-            <input type="text" name="desc">
-           
+            <label>Description:</label><br>
+            <input type="text" name="desc"> <br>
+            <label>Pdf:</label><br>
+            <input type="text" name="pdf">
             <br><br><br>
             <button name="save">Submit</button>
         

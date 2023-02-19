@@ -16,12 +16,12 @@ class NewsRepository{
         $name = $news->getName();
         $imgsrc = $news->getImgSrc();
         $desc = $news->getDesc();
-
+        $pdf = $news->getPdf();
     
         
-        $sql = "INSERT INTO addNews (news_id,imgSrc,name, description) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO addNews (news_id,imgSrc,name, description, pdf) VALUES (?, ?, ?, ?, ?)";
         $statement = $conn->prepare($sql);
-        $statement->execute([ $news_id,$imgsrc, $name, $desc]);
+        $statement->execute([ $news_id,$imgsrc, $name, $desc,$pdf]);
     }
     
 

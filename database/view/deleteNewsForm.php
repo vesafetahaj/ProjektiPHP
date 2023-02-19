@@ -16,7 +16,7 @@ session_start();
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 70%;
-        margin-left:13%;
+        margin-left:5%;
       }
 
       table td, table th {
@@ -97,6 +97,7 @@ session_start();
         <th>Img Src</th>
         <th>Name</th>
         <th>Description</th>
+        <th>Pdf</th>
         <th>Delete Action</th>
       </tr>
     </thead>
@@ -114,7 +115,7 @@ session_start();
                <td>$new[imgSrc]</td>
                <td>$new[name]</td>
                <td>$new[description]</td>
-               
+               <td>$new[pdf]</td>
                
               
                <td><button onclick=location.href='deleteNews.php?news_id=$new[news_id]' id='delete'>Delete</button></td>
