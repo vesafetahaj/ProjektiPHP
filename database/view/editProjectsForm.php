@@ -10,23 +10,23 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
-    <title>Delete News</title>
+    <title>Edit Projects</title>
     <style>
-     table {
+        
+     .container table {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
-        width: 70%;
-        margin-left:5%;
+        width: 80%;
+        margin-left:90px;
+        font-size:12px;
       }
-
+     
       table td, table th {
         border: 1px solid #ddd;
         padding: 8px;
         height:35px;
       }
-      table tr{
-        font-size:12px;
-      }
+
       table tr:nth-child(even){
         background-color: #f2f2f2;
       }
@@ -70,11 +70,11 @@ session_start();
       #edit:hover{
         background-color: #02075d;
       }
-      #delete{
-        background-color:red ;
+      #edit{
+        background-color:blue ;
       }
-      #delete:hover{
-        background-color: #5f0000;
+      #edit:hover{
+        background-color: green;
       }
       @media only screen and (max-width: 375px){  
         .container a #back{
@@ -90,7 +90,7 @@ session_start();
 </head>
 <body>
 <div class="container">       
-    <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">Delete news</h2>  <br>  
+    <h2 style="margin-top:30px;font-family: 'Roboto Condensed', sans-serif;margin-left:13%">Edit projects</h2>  <br>  
     <a href="dashboard.php"><button id="back">Go back</button></a>
   <table>
     <thead>
@@ -98,29 +98,25 @@ session_start();
         <th>ID</th>
         <th>Img Src</th>
         <th>Name</th>
-        <th>Description</th>
-        <th>Pdf</th>
-        <th>Delete Action</th>
+        <th>Edit Action</th>
       </tr>
     </thead>
     <tbody>
     
     <?php
-        include_once '../repository/newsRepository.php';
-        $newsRepository = new NewsRepository();
-        $news = $newsRepository->getAllNews();
-        foreach ($news as $new) {
+        include_once '../repository/projectRepository.php';
+        $projectRepository = new ProjectRepository();
+        $projects = $projectRepository->getAllProjects();
+        foreach ($projects as $project) {
             echo
                 "
            <tr>
-               <td>$new[news_id]</td>
-               <td>$new[imgSrc]</td>
-               <td>$new[name]</td>
-               <td>$new[description]</td>
-               <td>$new[pdf]</td>
-               
+               <td>$project[project_id]</td>
+               <td>$project[imgSrc]</td>
+               <td>$project[name]</td>
+            
               
-               <td><button onclick=location.href='deleteNews.php?news_id=$new[news_id]' id='delete'>Delete</button></td>
+               <td><button onclick=location.href='editProjects.php?project_id=$project[project_id]' id='edit'>Edit</button></td>
 
            </tr>
            ";

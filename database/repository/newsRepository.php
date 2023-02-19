@@ -42,10 +42,10 @@ class NewsRepository{
         $statement = $conn->prepare($sql);
         $statement->execute([$news_id]);
     }
-    function getNewsById($id){
+    function getNewsById($news_id){
         $conn = $this->connection;
   
-        $sql = "SELECT * FROM addnews WHERE news_id='$id'";
+        $sql = "SELECT * FROM addnews WHERE news_id='$news_id'";
         $statement=$conn->query($sql);
         $news = $statement->fetch();
   

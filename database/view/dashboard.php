@@ -175,6 +175,8 @@ session_start();
         <i class="fa-solid fa-address-book"></i><a href="contactdashboard.php">Contact Forms</a>
         <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
         <i class="fa-solid fa-newspaper"></i><a href="addProjectForm.php">Add Projects</a>
+        <a href= "editProjectsForm.php">Edit Projects</a>
+        <a href= "deleteProjectsForm.php">Delete Projects</a>
         <a href="addNews.php">Add News</a>
         <a href= "editNewsForm.php">Edit News</a>
         <a href= "deleteNewsForm.php">Delete News</a>

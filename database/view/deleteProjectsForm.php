@@ -10,13 +10,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
-    <title>Delete News</title>
+    <title>Delete Projects</title>
     <style>
      table {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 70%;
-        margin-left:5%;
+        margin-left:15%;
       }
 
       table td, table th {
@@ -24,9 +24,7 @@ session_start();
         padding: 8px;
         height:35px;
       }
-      table tr{
-        font-size:12px;
-      }
+
       table tr:nth-child(even){
         background-color: #f2f2f2;
       }
@@ -98,29 +96,26 @@ session_start();
         <th>ID</th>
         <th>Img Src</th>
         <th>Name</th>
-        <th>Description</th>
-        <th>Pdf</th>
         <th>Delete Action</th>
       </tr>
     </thead>
     <tbody>
     
     <?php
-        include_once '../repository/newsRepository.php';
-        $newsRepository = new NewsRepository();
-        $news = $newsRepository->getAllNews();
-        foreach ($news as $new) {
+        include_once '../repository/projectRepository.php';
+        $projectRepository = new ProjectRepository();
+        $projects = $projectRepository->getAllProjects();
+        foreach ($projects as $project) {
             echo
                 "
            <tr>
-               <td>$new[news_id]</td>
-               <td>$new[imgSrc]</td>
-               <td>$new[name]</td>
-               <td>$new[description]</td>
-               <td>$new[pdf]</td>
+               <td>$project[project_id]</td>
+               <td>$project[imgSrc]</td>
+               <td>$project[name]</td>
+               
                
               
-               <td><button onclick=location.href='deleteNews.php?news_id=$new[news_id]' id='delete'>Delete</button></td>
+               <td><button onclick=location.href='deleteProjects.php?project_id=$project[project_id]' id='delete'>Delete</button></td>
 
            </tr>
            ";

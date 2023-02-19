@@ -16,7 +16,7 @@ session_start();
      .container table {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
-        width: 60%;
+        width: 80%;
         margin-left:90px;
         font-size:12px;
       }

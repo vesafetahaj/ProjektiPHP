@@ -1,11 +1,11 @@
 <?php
-include_once '../repository/newsRepository.php';
+include_once '../repository/projectRepository.php';
 
-$id = $_GET['news_id'];
+$id = $_GET['project_id'];
 
-$newsRepository = new NewsRepository();
+$projectRepository = new ProjectRepository();
 
-$news = $newsRepository->getNewsById($id);
+$projects = $projectRepository->getProjectsById($id);
 
 ?>
 
@@ -55,16 +55,12 @@ $news = $newsRepository->getNewsById($id);
         <div style="margin-left: 30%;">
 
             <label>ID:</label><br>
-            <input type="text" name="id" value="<?=$news['news_id'] ?>" readonly><br>
+            <input type="text" name="id" value="<?=$projects['project_id'] ?>" readonly><br>
             <label>Img Src:</label><br>
-            <input type="text" name="imgSrc" value="<?=$news['imgSrc']?>"><br>
-            <label>Heading:</label><br>
-            <input type="text" name="name" value="<?=$news['name']?>"><br>
-            <label>Description:</label><br>
-            <input type="text" name="description" value="<?=$news['description']?>"> <br>
-            <label>Pdf:</label><br>
-            <input type="text" name="pdf" value="<?=$news['pdf']?>"><br>
-        
+            <input type="text" name="imgSrc" value="<?=$projects['imgSrc']?>"><br>
+            <label>Name:</label><br>
+            <input type="text" name="name" value="<?=$projects['name']?>"><br>
+            
             <button name="save">Save</button>
         
             
@@ -77,12 +73,10 @@ $news = $newsRepository->getNewsById($id);
 
 <?php
 if(isset($_POST['save'])){
-    $news_id = $id;
+    $project_id = $id;
     $imgSrc = $_POST['imgSrc'];
     $name = $_POST['name'];
-    $description = $_POST['description'];
-    $pdf = $_POST['pdf'];
-    $newsRepository->updateNew($news_id,$imgSrc,$name,$description,$pdf);
+    $projectRepository->updateProject($project_id,$imgSrc,$name);
     header("location:dashboard.php");
 }
 

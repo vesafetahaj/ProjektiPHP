@@ -24,7 +24,15 @@ class ProjectRepository{
     }
     
 
-
+    function getProjectsById($project_id){
+        $conn = $this->connection;
+  
+        $sql = "SELECT * FROM projects WHERE project_id='$project_id'";
+        $statement=$conn->query($sql);
+        $projects = $statement->fetch();
+  
+        return $projects;
+      }
     function getAdminByName(){
       $conn = $this->connection;
 
@@ -51,6 +59,16 @@ class ProjectRepository{
 
         $statement = $conn->prepare($sql);
         $statement->execute([$project_id]);
+    }
+    function updateProject($project_id, $imgSrc, $name) {
+        $conn = $this->connection;
+    
+        $sql = "UPDATE projects SET imgSrc=?, name=? WHERE project_id=?";
+    
+        $statement = $conn->prepare($sql);
+    
+        $statement->execute([$imgSrc, $name, $project_id]);
+        echo "<script> alert('News has been updated successfuly!') </script>";
     }
     
 }
