@@ -175,6 +175,8 @@ session_start();
         <i class="fa-solid fa-address-book"></i><a href="contactdashboard.php">Contact Forms</a>
         <i class="fa-solid fa-school" ></i><a href="studentsdashboard.php">New Registered Students</a>
         <i class="fa-solid fa-newspaper"></i><a href="addProjectForm.php">Add Projects</a>
+        <a href="addNews.php">Add News</a>
+        <a href= "deleteNewsForm.php">Delete News</a>
         <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php" id="back">Go Back</a>
         <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" id="logout">LogOut</a>
         
