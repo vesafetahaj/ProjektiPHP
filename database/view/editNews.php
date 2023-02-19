@@ -1,11 +1,24 @@
 <?php
 include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\newsRepository.php';
-
-$id = $_GET['news_id'];
-
 $newsRepository = new NewsRepository();
+if(isset($_GET['news_id'])){
+    $news_id = $_GET['news_id'];
+    $news = $newsRepository->getNewsById($news_id);
+} else {
+    // handle the case when 'news_id' is not set or invalid
+    echo "Invalid news ID";
+    exit();
+}
 
-$news = $newsRepository->getNewsById($id);
+if(isset($_POST['save'])){
+    $news_id = $_POST['news_id'];
+    $img = $_POST['imgSrc'];
+    $heading = $_POST['name'];
+    $desc = $_POST['description'];
+    $pdf = $_POST['pdf'];
+    $newsRepository->updateNew($news_id,$img,$heading,$desc,$pdf);
+    header("location:dashboard.php");
+}
 
 ?>
 
@@ -55,7 +68,7 @@ $news = $newsRepository->getNewsById($id);
         <div style="margin-left: 30%;">
 
             <label>ID:</label><br>
-            <input type="text" name="id" value="<?=$news['news_id'] ?>" readonly><br>
+            <input type="text" name="news_id" value="<?=$news['news_id'] ?>" readonly><br>
             <label>Img Src:</label><br>
             <input type="text" name="imgSrc" value="<?=$news['imgSrc']?>"><br>
             <label>Heading:</label><br>
@@ -75,16 +88,7 @@ $news = $newsRepository->getNewsById($id);
 
 
 
-<?php
-if(isset($_POST['save'])){
-    $news_id = $id;
-    $imgSrc = $_POST['imgSrc'];
-    $name = $_POST['name'];
-    $description = $_POST['description'];
-    $pdf = $_POST['pdf'];
-    $newsRepository->updateNews($news_id,$imgSrc,$name,$description,$pdf);
-    header("location:dashboard.php");
-}
+
 
 
 ?>

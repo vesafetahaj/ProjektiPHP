@@ -37,7 +37,7 @@ class NewsRepository{
     function deleteNewsById($news_id){
         $conn = $this->connection;
 
-        $sql = "DELETE FROM addNews WHERE news_id=?";
+        $sql = "DELETE FROM addnews WHERE news_id=?";
 
         $statement = $conn->prepare($sql);
         $statement->execute([$news_id]);
@@ -51,7 +51,7 @@ class NewsRepository{
   
         return $news;
       }
-      function updateNews($news_id, $imgSrc, $name, $description, $pdf) {
+      function updateNew($news_id, $imgSrc, $name, $description, $pdf) {
         $conn = $this->connection;
     
         $sql = "UPDATE addnews SET imgSrc=?, name=?, description=?, pdf=? WHERE news_id=?";
