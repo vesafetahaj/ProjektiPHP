@@ -215,7 +215,7 @@ if(!isset($_SESSION['email'])){
 <body>
     <div class="nav">
         <a href='logout.php'><button>Log Out</button></a>
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php"><button id="dashboardbttn" class="<?php echo $hide ?>">Dashboard</button></a>
+        <a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/dashboard.php" class="<?php echo $hide ?>"><button id="dashboardbttn" >Dashboard</button></a>
         
     </div>
     

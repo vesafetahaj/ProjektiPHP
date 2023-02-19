@@ -2,10 +2,10 @@
 session_start();
 
 if(!isset($_SESSION['email'])){
- header("location:login.php");
+ header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/login.php");
 }else{
  if($_SESSION['is_admin'] != "1"){
-    header("location:projects.php");
+    header("location:http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php");
  }
 
 
@@ -189,7 +189,6 @@ if(!isset($_SESSION['email'])){
         <a href= "editNewsForm.php">Edit News</a>
         <a href= "deleteNewsForm.php">Delete News</a>
         <a href="http://localhost:8080/Projekti/ProjektiPHP/login validation/projects.php" id="back">Go Back</a>
-        <a href="http://localhost:8080/Projekti/ProjektiPHP/login%20validation/logout.php" id="logout">LogOut</a>
         
     
     </div>
