@@ -106,7 +106,7 @@
                 <div class="about-content" id="about-content">
                     <h2>Rreth planprogramit</h2> <br>
                     <em>
-                    <?php
+                    <p><?php
 
                         require_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
                         $db = new DBConnection();
@@ -120,7 +120,7 @@
                         echo $result['text'];
 
                         ?>
-                    </em><br>
+                    </em></p><br>
                     <button id="readbttn" onclick="location.href='http://localhost:8080/Projekti/ProjektiPHP/planprogrami.php'">Read More ➔</button>
                 </div>
             </div>
