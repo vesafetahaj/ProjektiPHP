@@ -140,13 +140,17 @@ if(!isset($_SESSION['email'])){
             font-family: monospace;
             margin-top: -70px;
             flex-wrap: wrap;
-    
+            background-color: lightblue;
+            width:100%;
+            height: auto;
+            margin-top:60px;
+            padding-bottom:60px;
         }
         .project-content{
             width:220px ;
             border: 2px solid gray;
             margin-top: 90px;
-            margin-left:100px;
+            margin-left:50px;
             float: left;
         }
         .app:hover{
@@ -219,7 +223,7 @@ if(!isset($_SESSION['email'])){
         
     </div>
     
-    <div class="project-banner">
+   <div class="project-banner">
         <img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/project-banner.jpg" alt="">
         <div class="text-banner">
             <h4>Projects</h4>
@@ -231,7 +235,7 @@ if(!isset($_SESSION['email'])){
         <h3>Project Inspiration</h3>
         <h6>You can find starter projects in <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a>,<a href="https://code.org/educate/gamelab" target="_blank"> Game Lab </a>, <a href="https://code.org/educate/applab" target="_blank">App Lab </a>, and <a href="https://code.org/educate/weblab" target="_blank"> Web Lab</a>. These include project descriptions, tips, and demo projects you can remix to make your own!</h6>
     </div>
-    <h4 id="applab">App Lab Projects</h4>
+     <!-- <h4 id="applab">App Lab Projects</h4>
     <div class="projects" style=" background-color: lightpink;margin-bottom:-31px">
         <div class="project-content">
             <a href="#"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail.png" alt="" class="app"></a>
@@ -310,19 +314,21 @@ if(!isset($_SESSION['email'])){
             <h3 style="font-size: 15px; text-align:center;font-family:'Roboto Condensed', sans-serif; background-color:#b1f2ff;height:40px;margin-top:-5px">Dance Party Part 3</h3>
         </div>
     
-    </div> 
-    <?php
-        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printProject.php');
-        include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\dbProjects.php');
-        $projectsdb = new DBProjects();
-        $projects = $projectsdb->getProjectsByImgSrcAndName();
-        foreach($projects as $project){
-            $Imgsrc = $project['imgSrc'];
-            $name = $project['name'];
-            printProject($Imgsrc, $name);
-        }
-    ?>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+    </div>  -->
+    <div class="projects">
+        <?php
+            include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printProject.php');
+            include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\dbProjects.php');
+            $projectsdb = new DBProjects();
+            $projects = $projectsdb->getProjectsByImgSrcAndName();
+            foreach($projects as $project){
+                $Imgsrc = $project['imgSrc'];
+                $name = $project['name'];
+                printProject($Imgsrc, $name);
+            }
+        ?>
+    </div>
+    <br><br><br><br><br><br><br>
 </body>
     <footer>
             <a href="http://localhost:8080/Projekti/ProjektiPHP/home.php"><img src="http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-white.png"></a>
