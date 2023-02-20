@@ -4,7 +4,7 @@ include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\project.php';
 
 
 if(isset($_POST['save'])){
-    if(empty($_POST['name']) || empty($_POST['imgsrc'])){
+    if(empty($_POST['name']) || empty($_POST['imgsrc']|| empty($_POST['added_by']))){
         echo "<script>alert('Please fill all fields!')</script>";
     }
     else{
@@ -12,8 +12,8 @@ if(isset($_POST['save'])){
         $id = rand(1,999);
         $name = $_POST['name'];
         $imgSrc = $_POST['imgsrc'];
-
-        $project = new Project($id, $imgSrc, $name);
+        $added_by = $_POST['added_by'];
+        $project = new Project($id, $imgSrc, $name,$added_by);
         $projectRepository = new ProjectRepository();
         $projectRepository->insertProjects($project);
 

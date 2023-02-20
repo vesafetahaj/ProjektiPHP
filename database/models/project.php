@@ -4,12 +4,12 @@ class Project{
     private $id;
     private $imgsrc;
     private $name;
-    
-    function __construct($id,$imgsrc,$name){
+    private $added_by;
+    function __construct($id,$imgsrc,$name,$added_by){
          $this->id=$id;
          $this->imgsrc = $imgsrc;
          $this->name=$name;
-
+        $this->added_by = $added_by;
     }
 
     function getId(){
@@ -21,6 +21,8 @@ class Project{
     function getImgSrc(){
         return $this->imgsrc;
     }
-    
+    function getAddedBy(){
+        return $this->added_by;
+    }
 }
 ?>

@@ -197,7 +197,7 @@ if(!isset($_SESSION['email'])){
        <h1 style="margin-top: 20px">DASHBOARD</h1>
        <div class="gallery" style="border: 1px solid blue;" id="blue">
             <i class="fa-solid fa-user-pen" width="600" height="400" style="color:blue;"></i>
-            <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">3</h2>
+            <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">4</h2>
             <div class="desc" style="background-color: blue;">Admins</div>
         </div>
 

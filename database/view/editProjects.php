@@ -16,7 +16,7 @@ $projects = $projectRepository->getProjectsById($id);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href = "http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/start-smart-website-favicon-color.png" type = "image/x-icon">
-    <title>Edit News</title>
+    <title>Edit Projects</title>
     <style>
         input[type=text], select, input[type=password]{
             width: 50%;
@@ -49,7 +49,7 @@ $projects = $projectRepository->getProjectsById($id);
     </style>
 </head>
 <body>
-    <h2 style="margin-left:30%">Edit News</h2><br>
+    <h2 style="margin-left:30%">Edit Projects</h2><br>
     
     <form action="" method="POST">
         <div style="margin-left: 30%;">
@@ -60,7 +60,8 @@ $projects = $projectRepository->getProjectsById($id);
             <input type="text" name="imgSrc" value="<?=$projects['imgSrc']?>"><br>
             <label>Name:</label><br>
             <input type="text" name="name" value="<?=$projects['name']?>"><br>
-            
+            <label>Added By:</label><br>
+            <input type="text" name="added_by" value="<?=$projects['added_by']?>"><br>
             <button name="save">Save</button>
         
             
@@ -76,7 +77,8 @@ if(isset($_POST['save'])){
     $project_id = $id;
     $imgSrc = $_POST['imgSrc'];
     $name = $_POST['name'];
-    $projectRepository->updateProject($project_id,$imgSrc,$name);
+    $added_by = $_POST['added_by'];
+    $projectRepository->updateProject($project_id,$imgSrc,$name,$added_by);
     header("location:dashboard.php");
 }
 

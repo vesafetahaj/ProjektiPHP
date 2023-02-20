@@ -143,7 +143,7 @@ if(!isset($_SESSION['email'])){
             background-color: lightblue;
             width:100%;
             height: auto;
-            margin-top:60px;
+            margin-top:100px;
             padding-bottom:60px;
         }
         .project-content{
@@ -162,6 +162,23 @@ if(!isset($_SESSION['email'])){
             margin-left: 34px;
             margin-top: 70px;
         }
+        #add{
+            border: none;
+            height: 40px;
+            border-radius: 4px;
+            color: white;
+            cursor:pointer;
+            width: 80px;
+            background-color: #0275d8;
+            margin-right:60px;
+            float:right;
+            margin-top:40px;
+            display:inline; 
+        }
+        #add:hover{
+            background-color: blue;
+        }
+       
         @media only screen and (max-width: 375px){
             .project-banner{
                 width:100%;
@@ -235,6 +252,9 @@ if(!isset($_SESSION['email'])){
         <h3>Project Inspiration</h3>
         <h6>You can find starter projects in <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a>,<a href="https://code.org/educate/gamelab" target="_blank"> Game Lab </a>, <a href="https://code.org/educate/applab" target="_blank">App Lab </a>, and <a href="https://code.org/educate/weblab" target="_blank"> Web Lab</a>. These include project descriptions, tips, and demo projects you can remix to make your own!</h6>
     </div>
+    <a href="http://localhost:8080/Projekti/ProjektiPHP/database/view/addProjectForm.php"><button id="add">Add a new project</button></a>
+     
+
      <!-- <h4 id="applab">App Lab Projects</h4>
     <div class="projects" style=" background-color: lightpink;margin-bottom:-31px">
         <div class="project-content">
@@ -316,15 +336,17 @@ if(!isset($_SESSION['email'])){
     
     </div>  -->
     <div class="projects">
+        
         <?php
             include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\printProject.php');
-            include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\manage projects - admin\dbProjects.php');
-            $projectsdb = new DBProjects();
-            $projects = $projectsdb->getProjectsByImgSrcAndName();
+            include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\projectRepository.php');
+            $projectsdb = new ProjectRepository();
+            $projects = $projectsdb->getAllProjects();
             foreach($projects as $project){
                 $Imgsrc = $project['imgSrc'];
                 $name = $project['name'];
-                printProject($Imgsrc, $name);
+                $added_by = $project['added_by'];
+                printProject($Imgsrc, $name,$added_by);
             }
         ?>
     </div>

@@ -16,12 +16,12 @@ class ProjectRepository{
         $project_id = $project->getId();
         $name = $project->getName();
         $imgsrc = $project->getImgSrc();
-        
+        $added_by = $project->getAddedBy();
     
         
-        $sql = "INSERT INTO projects (project_id,imgSrc, name) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO projects (project_id,imgSrc, name, added_by) VALUES (?, ?, ?,?)";
         $statement = $conn->prepare($sql);
-        $statement->execute([$project_id, $imgsrc, $name]);
+        $statement->execute([$project_id, $imgsrc, $name,$added_by]);
     }
     
 
@@ -53,15 +53,15 @@ class ProjectRepository{
         $statement = $conn->prepare($sql);
         $statement->execute([$project_id]);
     }
-    function updateProject($project_id, $imgSrc, $name) {
+    function updateProject($project_id, $imgSrc, $name, $added_by) {
         $conn = $this->connection;
     
-        $sql = "UPDATE projects SET imgSrc=?, name=? WHERE project_id=?";
+        $sql = "UPDATE projects SET imgSrc=?, name=?, added_by=? WHERE project_id=?";
     
         $statement = $conn->prepare($sql);
     
-        $statement->execute([$imgSrc, $name, $project_id]);
-        echo "<script> alert('News has been updated successfuly!') </script>";
+        $statement->execute([$imgSrc, $name, $added_by,$project_id]);
+        echo "<script> alert('Project has been updated successfully!') </script>";
     }
     
 }

@@ -98,6 +98,7 @@ session_start();
         <th>ID</th>
         <th>Img Src</th>
         <th>Name</th>
+        <th>Added By</th>
         <th>Edit Action</th>
       </tr>
     </thead>
@@ -114,7 +115,7 @@ session_start();
                <td>$project[project_id]</td>
                <td>$project[imgSrc]</td>
                <td>$project[name]</td>
-            
+               <td>$project[added_by]</td>
               
                <td><button onclick=location.href='editProjects.php?project_id=$project[project_id]' id='edit'>Edit</button></td>
 

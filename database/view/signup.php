@@ -34,13 +34,13 @@
             <div class="container">
                 <div class="form">
                     <h1>Sign up to Start Smart Academy</h1>
-                    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+                    <form action="" method="post">
                         <label>Name</label>
                         <input type="text" placeholder="Name" class="inputfield" id="name" name="name"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="name" id="nameMessage"></label> <br>
 
                         <label>Surname</label>
-                        <input type="text" placeholder="Surname" class="inputfield" id="surname" name="surname><br>
+                        <input type="text" placeholder="Surname" class="inputfield" id="surname" name="surname"><br>
                         <label  style = "color: red; font-size: 12px; padding-left: 230px;" for="surname" id="surnameMessage"></label> <br>
 
                         <label>Gender</label>

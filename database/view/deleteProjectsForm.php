@@ -96,6 +96,7 @@ session_start();
         <th>ID</th>
         <th>Img Src</th>
         <th>Name</th>
+        <th>Added By</th>
         <th>Delete Action</th>
       </tr>
     </thead>
@@ -112,7 +113,7 @@ session_start();
                <td>$project[project_id]</td>
                <td>$project[imgSrc]</td>
                <td>$project[name]</td>
-               
+               <td>$project[added_by]</td>
                
               
                <td><button onclick=location.href='deleteProjects.php?project_id=$project[project_id]' id='delete'>Delete</button></td>

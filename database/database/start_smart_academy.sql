@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 03:42 PM
+-- Generation Time: Feb 20, 2023 at 05:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -164,16 +164,36 @@ INSERT INTO `planprogrami` (`id`, `kurrikula8deri11`, `kurrikula12deri15`, `kurr
 CREATE TABLE `projects` (
   `project_id` int(11) NOT NULL,
   `imgSrc` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) DEFAULT NULL,
+  `added_by` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`project_id`, `imgSrc`, `name`) VALUES
-(1004, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (15).png', 'Park the Car - Game'),
-(1005, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (16).png', 'Cake Shop - Game');
+INSERT INTO `projects` (`project_id`, `imgSrc`, `name`, `added_by`) VALUES
+(23, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (9).png', 'Game- Fishing', 'Vesa Fetahaj'),
+(128, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (4).png', 'Game', 'Greta Ahma'),
+(175, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (6).png', 'Game- Space Runner', 'Florentina Ademaj'),
+(232, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (14).png', 'Dance Party Part 3', 'Ramiz Hoxha'),
+(325, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (11).png', 'Love Calculator', 'Vesa Fetahaj'),
+(341, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/placeholder.png', 'Remix: Dance Party', 'Florentina Ademaj'),
+(374, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (8).png', 'Game- A-Mazing', 'Blerina Rrmoku'),
+(619, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (16).png', 'Test', 'Blerina Rrmoku'),
+(797, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (15).png', 'Test', 'Vanesa Fetahaj'),
+(1004, 'http://localhost:8080/Projekti/ProjektiPHP/Professional-IT-School-1/images/thumbnail (15).png', 'Park the Car - Game', 'Vanesa Fetahaj');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projectuser`
+--
+
+CREATE TABLE `projectuser` (
+  `project_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -229,6 +249,7 @@ INSERT INTO `user` (`id`, `name`, `surname`, `email`, `password`, `is_admin`) VA
 (62, 'Florentina', 'Ademaj', 'florentinaademaj@gmail.com', 'Flora123', 0),
 (168, 'Alba', 'Neziraj', 'albaneziraj@gmail.com', 'Alba1234', 0),
 (456, 'Vanesa', 'Fetahaj', 'vanesa.fetahaj@gmail.com', 'Vanesa123', 0),
+(550, 'Blerina', 'Rrmoku', 'blerina.rrmoku@ubt-uni.net', 'Blerina123', 1),
 (558, 'Vesa', 'Fetahaj', 'vesafetahaj2@gmail.com', 'Vesa1234', 1),
 (599, 'Enver', 'Fetahaj', 'enverfetahaj@gmail.com', 'Enver123', 0),
 (940, 'Greta', 'Ahma', 'greta.ahma@ubt-uni.net', 'Greta123', 1),
@@ -279,6 +300,13 @@ ALTER TABLE `planprogrami`
 --
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`project_id`);
+
+--
+-- Indexes for table `projectuser`
+--
+ALTER TABLE `projectuser`
+  ADD PRIMARY KEY (`project_id`,`user_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `regjistro`
@@ -349,6 +377,17 @@ ALTER TABLE `regjistro`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=966;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `projectuser`
+--
+ALTER TABLE `projectuser`
+  ADD CONSTRAINT `projectuser_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `projects` (`project_id`),
+  ADD CONSTRAINT `projectuser_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

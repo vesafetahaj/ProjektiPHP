@@ -69,7 +69,8 @@ session_start();
             <input type="text" name="imgsrc"><br>
             <label for="name">Name of the project:</label><br>
             <input type="text" name="name">
-           
+            <label>Added By:</label><br>
+            <input type="text" name="added_by">
             <br><br><br>
             <button name="save">Submit</button>
         
