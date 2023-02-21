@@ -1,5 +1,5 @@
 <?php 
-include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\projectRepository.php';
+include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\projectUserRepository.php';
 class ProjectUser{
     private $project_id;
     private $user_id;
