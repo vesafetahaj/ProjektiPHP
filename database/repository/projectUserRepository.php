@@ -1,21 +1,21 @@
 <?php 
+include 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
 
 
 class ProjectUserRepository{
     private $connection;
-    private $user_id;
 
     function __construct(){
         $conn = new DBConnection;
         $this->connection = $conn->startConnection();
     }
 
-    public function insertProjectUser($projectuser) {
+    public function insertProjectUser($project_id, $user_id) {
         $conn = $this->connection;
     
         
-        $project_id = $projectuser->getProject_id();
-        $user_id = $projectuser->getUser_id();
+        $project_id = $project_id->getProject_id();
+        $user_id = $user_id->getUser_id();
         $sql = "INSERT INTO projectuser (project_id,user_id) VALUES (?, ?)";
         $statement = $conn->prepare($sql);
         $statement->execute([$project_id, $user_id]);

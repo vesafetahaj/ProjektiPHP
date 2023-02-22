@@ -2,11 +2,8 @@
 include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\projectRepository.php';
 include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\project.php';
 
-
-
-
 if(isset($_POST['save'])){
-    if(empty($_POST['name']) || empty($_POST['imgsrc']|| empty($_POST['added_by']))){
+    if(empty(trim($_POST['name'])) || empty(trim($_POST['imgsrc'])) || empty(trim($_POST['added_by']))) {
         echo "<script>alert('Please fill all fields!')</script>";
     }
     else{
@@ -19,7 +16,7 @@ if(isset($_POST['save'])){
         $projectRepository = new ProjectRepository();
         $projectRepository->insertProjects($project);
        
-
+      
         header("Location: http://localhost:8080/Projekti/ProjektiPHP/login%20validation/projects.php"); 
     }
 }

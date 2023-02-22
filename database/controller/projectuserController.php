@@ -9,12 +9,12 @@ if(isset($_POST['save'])){
     }
     else{
         session_start();
-        $user_id = $_SESSION['id'];
+        $user_id = $_SESSION['user_id'];
         $project_id = $_SESSION['project_id'];
         $projectuser = new ProjectUser($user_id, $project_id);
         $projectuserRepository = new ProjectUserRepository();
             
-        $projectuserRepository->insertProjectUser($projectuser);
+        $projectuserRepository->insertProjectUser($projectuser,$user_id);
     
         header("Location: http://localhost:8080/Projekti/ProjektiPHP/login%20validation/projects.php"); 
     }
