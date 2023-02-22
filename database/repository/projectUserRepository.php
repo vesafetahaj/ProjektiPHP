@@ -15,14 +15,7 @@ class ProjectUserRepository{
     
         
         $project_id = $projectuser->getProject_id();
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $id = rand(1,999).$email;
-        $id = new User($id,$name,$surname,$email,$password);
-        $this->user_id = $id->getId();
-        $user_id = $_SESSION['user_id'];
+        $user_id = $projectuser->getUser_id();
         $sql = "INSERT INTO projectuser (project_id,user_id) VALUES (?, ?)";
         $statement = $conn->prepare($sql);
         $statement->execute([$project_id, $user_id]);
