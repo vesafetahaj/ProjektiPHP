@@ -1,7 +1,7 @@
 <?php 
 include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\repository\projectRepository.php';
 include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\project.php';
-include_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\models\projectUser.php';
+
 
 
 
@@ -18,11 +18,7 @@ if(isset($_POST['save'])){
         $project = new Project($id, $imgSrc, $name,$added_by);
         $projectRepository = new ProjectRepository();
         $projectRepository->insertProjects($project);
-        $_SESSION['user_id'] = $user_id;
-        $user_id = $_SESSION['user_id'];
-        $projectuser = new ProjectUser($id,$user_id);
-        $projectuserRepository = new ProjectUserRepository();
-        $projectuserRepository->insertProjectUser($projectuser);
+       
 
         header("Location: http://localhost:8080/Projekti/ProjektiPHP/login%20validation/projects.php"); 
     }
