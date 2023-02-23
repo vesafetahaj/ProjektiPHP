@@ -197,19 +197,64 @@ if(!isset($_SESSION['email'])){
        <h1 style="margin-top: 20px">DASHBOARD</h1>
        <div class="gallery" style="border: 1px solid blue;" id="blue">
             <i class="fa-solid fa-user-pen" width="600" height="400" style="color:blue;"></i>
-            <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">4</h2>
+            <h2 style="color:blue;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">
+            <?php
+
+                require_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
+                $db = new DBConnection();
+                $conn = $db->startConnection();
+                
+                $stmt = $conn->prepare("SELECT admins FROM dashboard WHERE id = 1");
+                $stmt->execute();
+                $result = $stmt->fetch();
+
+
+                echo $result['admins'];
+
+            ?></h2>
             <div class="desc" style="background-color: blue;">Admins</div>
         </div>
 
         <div class="gallery" style="border: 1px solid green;" id="green">
         <i class="fa-solid fa-graduation-cap" width="600" height="400"  style="color:green;"></i>
-            <h2 style="color:green;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">100</h2>
+            <h2 style="color:green;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">
+            <?php
+
+                require_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
+                $db = new DBConnection();
+                $conn = $db->startConnection();
+
+                $stmt = $conn->prepare("SELECT students FROM dashboard WHERE id = 1");
+                $stmt->execute();
+                $result = $stmt->fetch();
+
+
+                echo $result['students'];
+
+            ?>
+            </h2>
             <div class="desc" style="background-color: green;">Students</div>
         </div>
 
         <div class="gallery" style="border: 1px solid purple;" id="purple">
             <i class="fa-solid fa-book" width="600" height="400" style="color:purple;"></i>
-            <h2 style="color:purple;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">5</h2>
+            <h2 style="color:purple;font-family: 'FF Monteral Two', sans-serif;text-align: center;margin-bottom:10px">
+            <?php
+
+                require_once 'D:\xampp\htdocs\Projekti\ProjektiPHP\database\database\databaseConnection.php';
+                $db = new DBConnection();
+                $conn = $db->startConnection();
+
+                $stmt = $conn->prepare("SELECT programs FROM dashboard WHERE id = 1");
+                $stmt->execute();
+                $result = $stmt->fetch();
+
+
+                echo $result['programs'];
+
+            ?>
+        
+            </h2>
             <div class="desc" style="background-color: purple;">Programs</div>
         </div>
 
