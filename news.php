@@ -7,13 +7,6 @@ class NewsDB{
     function __construct(){
         $conn = new DBConnection;
         $this->connection = $conn->startConnection();
-        // $pdf_files = glob("D:\\xampp\\htdocs\\Projekti\\ProjektiPHP\\pdf\\*.pdf"); 
-        // foreach ($pdf_files as $pdf_file) {
-        //     $filename = basename($pdf_file);
-        //     $text = shell_exec("pdftotext '$pdf_file' -");
-        //     $sql = "INSERT INTO news (filename, description) VALUES ('$filename', '$text')";
-        //     $this->connection->query($sql);
-        // }  
     }
      public function savePDFsToDatabase() {
         $html = file_get_contents('D:\xampp\htdocs\Projekti\ProjektiPHP\Professional-IT-School-1\html\news.html');

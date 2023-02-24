@@ -6,7 +6,4 @@ session_destroy();
 header("Location: login.php");
 
 ?>
-<script>
 
-disableBackButton();
-</script>

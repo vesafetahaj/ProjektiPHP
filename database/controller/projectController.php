@@ -21,24 +21,4 @@ if(isset($_POST['save'])){
     }
 }
 
-
-// function test_input($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-// }
-// function validateName(){
-//     $name = test_input($_POST["name"]);
-//     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-//         echo "<script>alert('Name: Only letters and white space allowed')</script>";
-//     }
-// }
-// function validateEmail(){
-//     $email = test_input($_POST["email"]);
-//     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-//         echo "<script>alert('Invalid email format')</script>";
-//     }
-// }
-
 ?>  
