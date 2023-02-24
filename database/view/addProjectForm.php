@@ -1,7 +1,12 @@
 <?php
 
-include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\projectController.php');
 session_start();
+include_once('D:\xampp\htdocs\Projekti\ProjektiPHP\database\controller\projectController.php');
+
+$user_email = $_SESSION['email'];
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +75,10 @@ session_start();
             <label for="name">Name of the project:</label><br>
             <input type="text" name="name">
             <label>Added By:</label><br>
-            <input type="text" name="added_by">
+            <input type="hidden" name="added_by" value="<?= $user_email ?>">
+            <input type="text" value="<?= $user_email ?>" disabled>
+
+
             <br><br><br>
             <button name="save">Submit</button>
         

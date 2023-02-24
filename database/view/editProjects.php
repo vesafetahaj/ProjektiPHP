@@ -61,7 +61,7 @@ $projects = $projectRepository->getProjectsById($id);
             <label>Name:</label><br>
             <input type="text" name="name" value="<?=$projects['name']?>"><br>
             <label>Added By:</label><br>
-            <input type="text" name="added_by" value="<?=$projects['added_by']?>"><br>
+            <input type="text" name="added_by" value="<?=$projects['added_by']?>" disabled><br>
             <button name="save">Save</button>
         
             
