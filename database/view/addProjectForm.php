@@ -74,9 +74,9 @@ $user_email = $_SESSION['email'];
             <input type="text" name="imgsrc"><br>
             <label for="name">Name of the project:</label><br>
             <input type="text" name="name">
-            <label>Added By:</label><br>
+            <!--<label>Added By:</label><br>-->
             <input type="hidden" name="added_by" value="<?= $user_email ?>">
-            <input type="text" value="<?= $user_email ?>" disabled>
+            <!--<input type="text" value="<?= $user_email ?>" disabled>-->
 
 
             <br><br><br>
